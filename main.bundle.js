@@ -73,7 +73,7 @@ module.exports = "<div class=\"sidebar\">\n  <ul class=\"vs-categories\">\n    <
 /***/ 1011:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"vs-login\">\n  <i class=\"vs-logo fa fa-plug\" aria-hidden=\"true\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A convenient, lightweight, scheduling tool.</span></i>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.authenticated()\">Log In or Sign Up</button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.authenticated()\"><a style=\"text-decoration: none;color:white;\" href=\"../private/(aux:list)\">Continue to PowerList</a></button>\n</div>"
+module.exports = "<div class=\"vs-login\">\n  <i class=\"vs-logo fa fa-plug\" aria-hidden=\"true\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A convenient, lightweight, scheduling tool.</span></i>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.authenticated()\">Log In or Sign Up</button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.authenticated()\"><a style=\"text-decoration: none\" href=\"../private/(aux:list)\">Continue to PowerList</a></button>\n</div>"
 
 /***/ },
 
