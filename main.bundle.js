@@ -17,7 +17,7 @@ module.exports = ".vs-footer {\n    margin: 0;\n    padding: 5px;\n    text-alig
 /***/ 1002:
 /***/ function(module, exports) {
 
-module.exports = "/* ********************** LIST CODE ********************** */\n@media (max-width: 768px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 100%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 80%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n\n@media (min-width: 992px) {\n    .list {\n      position: fixed;\n      top: 50px;\n      bottom: 0;\n      left: 300px;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      border-right: 1px solid #eee;\n      width: 400px;\n    }\n}\n\n.vs-list-item {\n  width: calc(100% - 100px);\n  padding: 8px 3px;\n}\n\n.vs-list {\n  padding: 5px;\n  margin-bottom: 150px;\n}\n\n.vs-task-circle {\n  margin-right: 20px;\n  border-radius: 100%;\n  width: 20px;\n  height: 20px;\n  border: 2px solid #f3f3f3;\n}\n  .vs-task-circle:hover {\n    background-color: black;\n  }\n\n.vs-task-description {\n  padding-bottom: 5px;\n}\n\n.vs-task-input {\n  position: absolute;\n  display: block;\n  width: calc(100% - 40px);\n  bottom: 125px;\n  border: 1px solid #f2f2f2;\n  padding: 5px;\n  font-size: 13px;\n  text-align: center;\n}\n\n.vs-task-title {\n  font-weight: 100;\n  font-size: 1em;\n}\n\n.vs-task-start {\n  width: 70px;\n  height: 100%;\n  font-size: 0.8em;\n  text-align: center;\n}\n\n.vs-task-button {\n  position: absolute;\n  display: inline-block;\n  bottom: 59px;\n  left: 20px;\n  width: calc(100% - 40px);\n  /*background-color: #2c6bd6;*/\n  background-color: #D84D20;\n  border-radius: 0px;\n  padding: 10px;\n  border: none;\n  font-size: 0.8em;\n  font-weight: lighter;\n}\n\n/* ********************* sidebar code *********************** */\n@media (max-width: 768px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 100%;\n        margin: auto;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-left: 10%;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 80%;\n        margin: auto;\n    }\n}\n\n@media (min-width: 992px) {\n    .sidebar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 0;\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n        width: 300px;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n    }\n}\n\n.vs-category {\n    padding: 0px;\n}\n    .vs-category:hover {\n        background-color: white;\n        cursor: pointer;\n    }\n    .sidebar .active {\n        background-color: white;\n    }\n\n.vs-category-description {\n    font-weight: 600;\n    display: block;\n    padding: 5px;\n}\n\n.vs-category-add {\n    display: inline-block;\n    padding-left: 10px;\n    color: #D84D20;\n    font-weight: 100;\n    font-size: 0.8em;\n}\n\n.vs-category-input {\n    display: none;\n    margin-left: 10px;\n}\n\n.vs-category-input-cancel {\n    display: none;\n    color: black;\n    margin-left: 50px;\n    font-weight: 100;\n}\n    .vs-category-input-cancel:hover {\n        text-decoration: underline;\n    }\n\n.vs-category-title {\n    text-align: left;\n    font-weight: 700;\n    padding-left: 20px;\n    padding-bottom: 20px;\n    font-size: 1.3em;\n    /*color: #D84D20;*/\n    color: black;\n    border-bottom: 2px solid #f2f2f2;\n    margin-bottom: 0;\n}\n\n.vs-list-table {\n    max-height: calc(100vh - 300px);\n    overflow-y: scroll;\n}\n\n.vs-overdue {\n    color: red;\n    font-weight: 700;\n    padding-left: 10px;\n    font-style: italic;\n    font-size: 0.8em;\n}"
+module.exports = "/* ********************** LIST CODE ********************** */\n@media (max-width: 768px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 100%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 80%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n\n@media (min-width: 992px) {\n    .list {\n      position: fixed;\n      top: 50px;\n      bottom: 0;\n      left: 300px;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      border-right: 1px solid #eee;\n      width: 400px;\n    }\n}\n\n.vs-list-item {\n  width: calc(100% - 100px);\n  padding: 8px 3px;\n}\n\n.vs-list {\n  padding: 5px;\n  margin-bottom: 150px;\n}\n\n.vs-task-circle {\n  margin-right: 20px;\n  border-radius: 100%;\n  width: 20px;\n  height: 20px;\n  border: 2px solid #f3f3f3;\n}\n  .vs-task-circle:hover {\n    background-color: black;\n  }\n\n.vs-task-description {\n  padding-bottom: 5px;\n}\n\n.vs-task-input {\n  position: absolute;\n  display: block;\n  width: calc(100% - 40px);\n  bottom: 125px;\n  border: 1px solid #f2f2f2;\n  padding: 5px;\n  font-size: 13px;\n  text-align: center;\n}\n\n.vs-task-title {\n  font-weight: 100;\n  font-size: 1em;\n}\n\n.vs-task-start {\n  width: 70px;\n  height: 100%;\n  font-size: 0.8em;\n  text-align: center;\n}\n\n.vs-task-button {\n  position: absolute;\n  display: inline-block;\n  bottom: 59px;\n  left: 20px;\n  width: calc(100% - 40px);\n  /*background-color: #2c6bd6;*/\n  background-color: #D84D20;\n  border-radius: 0px;\n  padding: 10px;\n  border: none;\n  font-size: 0.8em;\n  font-weight: lighter;\n}\n\n/* ********************* sidebar code *********************** */\n@media (max-width: 768px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 100%;\n        margin: auto;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-left: 10%;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 80%;\n        margin: auto;\n    }\n}\n\n@media (min-width: 992px) {\n    .sidebar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 0;\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n        width: 300px;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n    }\n}\n\n.vs-category {\n    padding: 0px;\n}\n    .vs-category:hover {\n        background-color: white;\n        cursor: pointer;\n    }\n    .sidebar .active {\n        background-color: white;\n    }\n\n.vs-category-description {\n    font-weight: 600;\n    display: block;\n    padding: 5px;\n}\n\n.vs-category-add {\n    display: inline-block;\n    padding-left: 10px;\n    color: #D84D20;\n    font-weight: 100;\n    font-size: 0.8em;\n}\n\n.vs-category-input {\n    display: none;\n    margin-left: 10px;\n}\n\n.vs-category-input-cancel {\n    display: none;\n    color: black;\n    margin-left: 50px;\n    font-weight: 100;\n}\n    .vs-category-input-cancel:hover {\n        text-decoration: underline;\n    }\n\n.vs-category-title {\n    text-align: left;\n    font-weight: 700;\n    padding-left: 20px;\n    padding-bottom: 20px;\n    font-size: 1.3em;\n    /*color: #D84D20;*/\n    color: black;\n    border-bottom: 2px solid #f2f2f2;\n    margin-bottom: 0;\n}\n\n.vs-list-table {\n    max-height: calc(100vh - 300px);\n    overflow-y: scroll;\n}\n\n.vs-overdue {\n    color: red;\n    font-weight: 700;\n    padding-left: 10px;\n    font-style: italic;\n    font-size: 0.8em;\n}\n\n.display-none {\n    display: none !important;\n}\n\n.display-inline {\n    display: inline-block !important;\n}"
 
 /***/ },
 
@@ -66,7 +66,7 @@ module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n  <p>D
 /***/ 1010:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"sidebar\">\n  <ul class=\"vs-categories\">\n    <li class='vs-category'>\n      <div class=\"js-category-description vs-category-description\" (click)=\"selectCategory($event)\" style=\"color: black;\"><i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px;\"></i>Home</div>\n    </li>\n    <li class='vs-category' *ngFor=\"let category of categories\">\n      <div (click)=\"selectCategory($event, category)\" class='js-category-description vs-category-description'>\n        <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n        {{category.name}}\n        <i class=\"fa fa-times\" aria-hidden=\"true\" (click)=\"deleteCategory(category, $event);\" style=\"float: right; line-height: 1.5em;\"></i>\n      </div>\n    </li>\n  </ul>\n  <form (keydown)=\"addCategory(categoryInput, $event);\" class=\"js-category-form vs-category-form\">\n    <a href=\"javascript:void(0);\"><i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i></a>\n    <a href=\"javascript:void(0);\"><p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p></a>\n    <input #categoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n    <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(categoryInput);\">cancel</a>\n  </form>\n</div>\n\n<div class=\"list\">\n  <h1 class=\"vs-category-title js-category-title\">Home</h1>\n  <div class=\"vs-list-table\">\n    <table style='width: 100%;height:0;'>\n      <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n        <td style=\"height: 100%;\"><div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div></td>\n        <td class='vs-list-item'>\n          <span class='vs-task-description'>\n            <div class=\"vs-task-title\">{{task.title}}<span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span></div>\n          </span>\n        </td>\n        <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n      </tr>\n    </table>\n  </div>\n  <form (keydown)=\"addTask(taskInput, startDateInput, endDateInput, $event);\">\n      <input #taskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Description\"/>\n      <input #startDateInput class=\"flatpickrStart vs-flatpickr-start\" placeholder=\"Start Date\" type=\"datetime-local\" step=\"any\"/>\n      <input #endDateInput class=\"flatpickrEnd vs-flatpickr-end\" placeholder=\"End Date\" type=\"datetime-local\" step=\"any\"/>\n  </form>\n  <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(taskInput, startDateInput, endDateInput, $event);\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n</div>"
+module.exports = "<div class=\"sidebar\">\n\n  <ul class=\"vs-categories\">\n    <li class='vs-category'>\n      <div class=\"js-category-description vs-category-description\" (click)=\"selectCategory($event)\" style=\"color: black;\"><i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i> Home</div>\n    </li>\n\n    <li class='vs-category' *ngFor=\"let category of categories\">\n      <div (click)=\"selectCategory($event, category)\" (dblclick)=\"toggleCategoryEdit(category.id)\" class='js-category-description vs-category-description'>\n        <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n        <p class=\"{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n        <input #editCategoryInput class=\"{{category.id}}-input\" (keydown)=\"updateCategory($event, category.id);\" style=\"display:none;\" type=\"text\" maxlength=\"35\"/>\n        <i class=\"fa fa-times\" aria-hidden=\"true\" (click)=\"deleteCategory(category, $event);\" style=\"float: right; line-height: 1.5em;\"></i>\n      </div>\n    </li>\n  </ul>\n\n  <form (keydown)=\"addCategory(categoryInput, $event);\" class=\"js-category-form vs-category-form\">\n    <a href=\"javascript:void(0);\"><i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i></a>\n    <a href=\"javascript:void(0);\"><p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p></a>\n    <input #categoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n    <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(categoryInput);\">cancel</a>\n  </form>\n\n</div>\n\n<div class=\"list\">\n\n  <h1 class=\"vs-category-title js-category-title\">Home</h1>\n\n  <div class=\"vs-list-table\">\n    <table style='width: 100%;height:0;'>\n      <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n        <td style=\"height: 100%;\"><div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div></td>\n        <td class='vs-list-item'>\n          <span class='vs-task-description'>\n            <div class=\"vs-task-title\">{{task.title}}<span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span></div>\n          </span>\n        </td>\n        <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n      </tr>\n    </table>\n  </div>\n\n  <form (keydown)=\"addTask(taskInput, startDateInput, endDateInput, $event);\">\n      <input #taskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Description\"/>\n      <input #startDateInput class=\"flatpickrStart vs-flatpickr-start\" placeholder=\"Start Date\" type=\"datetime-local\" step=\"any\"/>\n      <input #endDateInput class=\"flatpickrEnd vs-flatpickr-end\" placeholder=\"End Date\" type=\"datetime-local\" step=\"any\"/>\n  </form>\n\n  <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(taskInput, startDateInput, endDateInput, $event);\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n\n</div>"
 
 /***/ },
 
@@ -281,7 +281,9 @@ var ListComponent = (function () {
                 that.tasks.length = 0;
                 var tasks = JSON.parse(response._body);
                 for (var i = 0; i < tasks.length; i++) {
-                    if (Date.parse(tasks[i].end) < new Date().getTime()) {
+                    var date = new Date();
+                    var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
+                    if (Date.parse(tasks[i].end) < (date.getTime() - offsetInMillis)) {
                         tasks[i].overdue = true;
                     }
                     that.insertIntoTasksObject(tasks[i]);
@@ -295,7 +297,9 @@ var ListComponent = (function () {
             var tasks = JSON.parse(response._body);
             that.tasks.length = 0;
             for (var i = 0; i < tasks.length; i++) {
-                if (Date.parse(tasks[i].end) < new Date().getTime()) {
+                var date = new Date();
+                var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
+                if (Date.parse(tasks[i].end) < (date.getTime() - offsetInMillis)) {
                     tasks[i].overdue = true;
                 }
                 that.insertIntoTasksObject(tasks[i]);
@@ -315,7 +319,9 @@ var ListComponent = (function () {
                     var task = new __WEBPACK_IMPORTED_MODULE_1__models_task__["a" /* Task */](null, taskInput.value, taskInput.value, startDateInput.value, endDateInput.value, url, parseInt(this.selectedCategoryId), parseInt(localStorage.getItem("user_id")), backgroundColor, false); // gotta change this to category id
                     $.when(this.taskService.createTask(task)).done(function (response) {
                         var realTask = JSON.parse(response._body);
-                        if (Date.parse(realTask.end) < new Date().getTime()) {
+                        var date = new Date();
+                        var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
+                        if (Date.parse(realTask.end) < (date.getTime() - offsetInMillis)) {
                             realTask.overdue = true;
                         }
                         that.insertIntoTasksObject(realTask);
@@ -398,6 +404,35 @@ var ListComponent = (function () {
         // toggle active css
         this.clearActiveCategories();
         $(event.currentTarget).addClass('active');
+    };
+    ListComponent.prototype.toggleCategoryEdit = function (category_id) {
+        $("." + category_id).toggleClass('display-none');
+        $("." + category_id + "-input").toggleClass('display-inline');
+        if ($("." + category_id + "-input").hasClass('display-inline')) {
+            $("." + category_id + "-input").val("");
+            $("." + category_id + "-input").focus();
+        }
+    };
+    ListComponent.prototype.updateCategory = function (event, category_id) {
+        if (event.keyCode == 13) {
+            if ($(event.currentTarget).val()) {
+                var params = { 'name': $(event.currentTarget).val() };
+                this.categoryService.updateCategory(category_id, params); // doesn't need to wait for server response
+                this.updateCategorySuperficially(category_id, $(event.currentTarget).val());
+                this.toggleCategoryEdit(category_id);
+            }
+            else {
+                bootbox.alert('Category name must not be empty');
+            }
+        }
+    };
+    ListComponent.prototype.updateCategorySuperficially = function (category_id, name) {
+        for (var i = 0; i < this.categories.length; i++) {
+            if (this.categories[i].id === category_id) {
+                this.categories[i].name = name;
+                return;
+            }
+        }
     };
     ListComponent.prototype.deleteCategory = function (category, event) {
         event.stopPropagation(); // click event propagation was killing me
@@ -988,9 +1023,9 @@ var CategoryService = (function () {
     function CategoryService(http) {
         this.http = http;
     }
-    CategoryService.prototype.getCategoryTasks = function (categoryId) {
+    CategoryService.prototype.getCategoryTasks = function (category_id) {
         return this.http
-            .get("https://calm-inlet-47809.herokuapp.com/get_category_tasks?category_id=" + categoryId)
+            .get("https://calm-inlet-47809.herokuapp.com/get_category_tasks?category_id=" + category_id)
             .toPromise()
             .then(this.extractData)
             .catch(this.handleError);
@@ -1027,6 +1062,13 @@ var CategoryService = (function () {
     CategoryService.prototype.deleteCategory = function (category_id) {
         return this.http
             .delete("https://calm-inlet-47809.herokuapp.com/categories/" + category_id)
+            .toPromise()
+            .then(this.extractData)
+            .catch(this.handleError);
+    };
+    CategoryService.prototype.updateCategory = function (category_id, params) {
+        return this.http
+            .patch("https://calm-inlet-47809.herokuapp.com/categories/" + category_id, params)
             .toPromise()
             .then(this.extractData)
             .catch(this.handleError);
