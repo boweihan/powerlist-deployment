@@ -17,7 +17,7 @@ module.exports = ".vs-footer {\n    margin: 0;\n    padding: 5px;\n    text-alig
 /***/ 1002:
 /***/ function(module, exports) {
 
-module.exports = "/* ********************** LIST CODE ********************** */\n@media (max-width: 768px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 100%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 80%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n\n@media (min-width: 992px) {\n    .list {\n      position: fixed;\n      top: 50px;\n      bottom: 0;\n      left: 300px;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      border-right: 1px solid #eee;\n      width: 400px;\n    }\n}\n\n.vs-list-item {\n  width: calc(100% - 100px);\n  padding: 8px 3px;\n}\n\n.vs-list {\n  padding: 5px;\n  margin-bottom: 150px;\n}\n\n.vs-task-circle {\n  margin-right: 20px;\n  border-radius: 100%;\n  width: 20px;\n  height: 20px;\n  border: 2px solid #f3f3f3;\n}\n  .vs-task-circle:hover {\n    background-color: black;\n  }\n\n.vs-task-description {\n  padding-bottom: 5px;\n}\n\n.vs-task-input {\n  position: absolute;\n  display: block;\n  width: calc(100% - 40px);\n  bottom: 125px;\n  border: 1px solid #f2f2f2;\n  padding: 5px;\n  font-size: 13px;\n  text-align: center;\n}\n\n.vs-task-title {\n  font-weight: 100;\n  font-size: 1em;\n}\n\n.vs-task-start {\n  width: 70px;\n  height: 100%;\n  font-size: 0.8em;\n  text-align: center;\n}\n\n.vs-task-button {\n  position: absolute;\n  display: inline-block;\n  bottom: 59px;\n  left: 20px;\n  width: calc(100% - 40px);\n  /*background-color: #2c6bd6;*/\n  background-color: #D84D20;\n  border-radius: 0px;\n  padding: 10px;\n  border: none;\n  font-size: 0.8em;\n  font-weight: lighter;\n}\n\n/* ********************* sidebar code *********************** */\n@media (max-width: 768px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 100%;\n        margin: auto;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-left: 10%;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 80%;\n        margin: auto;\n    }\n}\n\n@media (min-width: 992px) {\n    .sidebar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 0;\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n        width: 300px;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n    }\n}\n\n.vs-category {\n    padding: 0px;\n}\n    .vs-category:hover {\n        background-color: white;\n        cursor: pointer;\n    }\n    .sidebar .active {\n        background-color: white;\n    }\n\n.vs-category-description {\n    font-weight: 600;\n    display: block;\n    padding: 5px;\n}\n\n.vs-category-add {\n    display: inline-block;\n    padding-left: 10px;\n    color: #D84D20;\n    font-weight: 100;\n    font-size: 0.8em;\n}\n\n.vs-category-input {\n    display: none;\n    margin-left: 10px;\n}\n\n.vs-category-input-cancel {\n    display: none;\n    color: black;\n    margin-left: 50px;\n    font-weight: 100;\n}\n    .vs-category-input-cancel:hover {\n        text-decoration: underline;\n    }\n\n.vs-category-title {\n    text-align: left;\n    font-weight: 700;\n    padding-left: 20px;\n    padding-bottom: 20px;\n    font-size: 1.3em;\n    /*color: #D84D20;*/\n    color: black;\n    border-bottom: 2px solid #f2f2f2;\n    margin-bottom: 0;\n}\n\n.vs-list-table {\n    max-height: calc(100vh - 300px);\n    overflow-y: scroll;\n}\n\n.vs-overdue {\n    color: red;\n    font-weight: 700;\n    padding-left: 10px;\n    font-style: italic;\n    font-size: 0.8em;\n}\n\n.display-none {\n    display: none !important;\n}\n\n.display-inline {\n    display: inline-block !important;\n}"
+module.exports = "/* ********************** LIST CODE ********************** */\n@media (max-width: 768px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 100%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .list {\n      position: relative;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      width: 80%;\n      margin: auto;\n      padding-top: 5vh;\n      height: 100vh;\n    }\n}\n\n@media (min-width: 992px) {\n    .list {\n      position: fixed;\n      top: 50px;\n      bottom: 0;\n      left: 300px;\n      display: block;\n      padding: 20px;\n      background-color: white;\n      border-right: 1px solid #eee;\n      width: 400px;\n    }\n}\n\n.vs-list-item {\n  width: calc(100% - 100px);\n  padding: 8px 3px;\n}\n\n.vs-list {\n  padding: 5px;\n  margin-bottom: 150px;\n}\n\n.vs-task-circle {\n  margin-right: 20px;\n  border-radius: 100%;\n  width: 20px;\n  height: 20px;\n  border: 2px solid #f3f3f3;\n}\n  .vs-task-circle:hover {\n    background-color: black;\n  }\n\n.vs-task-description {\n  padding-bottom: 5px;\n}\n\n.vs-task-input {\n  position: absolute;\n  display: block;\n  width: calc(100% - 40px);\n  bottom: 125px;\n  border: 1px solid #f2f2f2;\n  padding: 5px;\n  font-size: 13px;\n  text-align: center;\n}\n\n.vs-task-title {\n  font-weight: 100;\n  font-size: 1em;\n}\n\n.vs-task-start {\n  width: 70px;\n  height: 100%;\n  font-size: 0.8em;\n  text-align: center;\n}\n\n.vs-task-button {\n  position: absolute;\n  display: inline-block;\n  bottom: 59px;\n  left: 20px;\n  width: calc(100% - 40px);\n  /*background-color: #2c6bd6;*/\n  background-color: #D84D20;\n  border-radius: 0px;\n  padding: 10px;\n  border: none;\n  font-size: 0.8em;\n  font-weight: lighter;\n}\n\n/* ********************* sidebar code *********************** */\n@media (max-width: 768px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 100%;\n        margin: auto;\n    }\n}\n@media (min-width: 768px) and (max-width: 992px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-left: 10%;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 80%;\n        margin: auto;\n    }\n}\n\n@media (min-width: 992px) {\n    .sidebar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 0;\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n        width: 300px;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n    }\n}\n\n.vs-category {\n    padding: 0px;\n}\n    .vs-category:hover {\n        background-color: white;\n        cursor: pointer;\n    }\n    .sidebar .active {\n        background-color: white;\n    }\n\n.vs-category-description {\n    font-weight: 600;\n    display: block;\n    padding: 5px;\n}\n\n.vs-category-add {\n    display: inline-block;\n    padding-left: 10px;\n    color: #D84D20;\n    font-weight: 100;\n    font-size: 0.8em;\n}\n\n.vs-category-input {\n    display: none;\n    margin-left: 10px;\n}\n\n.vs-category-input-cancel {\n    display: none;\n    color: black;\n    margin-left: 50px;\n    font-weight: 100;\n}\n    .vs-category-input-cancel:hover {\n        text-decoration: underline;\n    }\n\n.vs-category-title {\n    text-align: left;\n    font-weight: 700;\n    padding-left: 20px;\n    padding-bottom: 20px;\n    font-size: 1.3em;\n    /*color: #D84D20;*/\n    color: black;\n    border-bottom: 2px solid #f2f2f2;\n    margin-bottom: 0;\n}\n\n.vs-list-table {\n    max-height: calc(100vh - 300px);\n    overflow-y: scroll;\n}\n\n.vs-overdue {\n    color: red;\n    font-weight: 700;\n    padding-left: 10px;\n    font-style: italic;\n    font-size: 0.8em;\n}\n\n.display-none {\n    display: none !important;\n}\n\n.display-inline {\n    display: inline-block !important;\n}\n\n.display-block {\n    display: block !important;\n}"
 
 /***/ },
 
@@ -66,7 +66,7 @@ module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n  <p>D
 /***/ 1010:
 /***/ function(module, exports) {
 
-module.exports = "<div class=\"sidebar\">\n\n  <ul class=\"vs-categories\">\n    <li class='vs-category'>\n      <div class=\"js-category-description vs-category-description\" (click)=\"selectCategory($event)\" style=\"color: black;\"><i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i> Home</div>\n    </li>\n\n    <li class='vs-category' *ngFor=\"let category of categories\">\n      <div (click)=\"selectCategory($event, category)\" (dblclick)=\"toggleCategoryEdit(category.id)\" class='js-category-description vs-category-description'>\n        <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n        <p class=\"{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n        <input #editCategoryInput class=\"{{category.id}}-input\" (keydown)=\"updateCategory($event, category.id);\" style=\"display:none;\" type=\"text\" maxlength=\"35\"/>\n        <i class=\"fa fa-times\" aria-hidden=\"true\" (click)=\"deleteCategory(category, $event);\" style=\"float: right; line-height: 1.5em;\"></i>\n      </div>\n    </li>\n  </ul>\n\n  <form (keydown)=\"addCategory(categoryInput, $event);\" class=\"js-category-form vs-category-form\">\n    <a href=\"javascript:void(0);\"><i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i></a>\n    <a href=\"javascript:void(0);\"><p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p></a>\n    <input #categoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n    <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(categoryInput);\">cancel</a>\n  </form>\n\n</div>\n\n<div class=\"list\">\n\n  <h1 class=\"vs-category-title js-category-title\">Home</h1>\n\n  <div class=\"vs-list-table\">\n    <table style='width: 100%;height:0;'>\n      <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n        <td style=\"height: 100%;\"><div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div></td>\n        <td class='vs-list-item'>\n          <span class='vs-task-description'>\n            <div class=\"vs-task-title\">{{task.title}}<span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span></div>\n          </span>\n        </td>\n        <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n      </tr>\n    </table>\n  </div>\n\n  <form (keydown)=\"addTask(taskInput, startDateInput, endDateInput, $event);\">\n      <input #taskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Description\"/>\n      <input #startDateInput class=\"flatpickrStart vs-flatpickr-start\" placeholder=\"Start Date\" type=\"datetime-local\" step=\"any\"/>\n      <input #endDateInput class=\"flatpickrEnd vs-flatpickr-end\" placeholder=\"End Date\" type=\"datetime-local\" step=\"any\"/>\n  </form>\n\n  <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(taskInput, startDateInput, endDateInput, $event);\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n\n</div>"
+module.exports = "<div class=\"sidebar\">\n\n  <ul class=\"vs-categories\">\n    <li class='vs-category'>\n      <div class=\"js-category-description vs-category-description\" (click)=\"selectCategory($event)\" style=\"color: black;\"><i class=\"fa fa-home\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i> Home</div>\n    </li>\n\n    <li class='vs-category' *ngFor=\"let category of categories\">\n      <div (click)=\"selectCategory($event, category)\" (dblclick)=\"toggleEdit(category.id, 'category')\" class='js-category-description vs-category-description'>\n        <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n        <p class=\"category-{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n        <input #editCategoryInput class=\"category-{{category.id}}-input\" (keydown)=\"updateCategory($event, category.id);\" style=\"display:none;\" type=\"text\" maxlength=\"35\"/>\n        <i class=\"fa fa-times\" aria-hidden=\"true\" (click)=\"deleteCategory(category, $event);\" style=\"float: right; line-height: 1.5em;\"></i>\n      </div>\n    </li>\n  </ul>\n\n  <form (keydown)=\"addCategory(categoryInput, $event);\" class=\"js-category-form vs-category-form\">\n    <a href=\"javascript:void(0);\"><i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i></a>\n    <a href=\"javascript:void(0);\"><p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p></a>\n    <input #categoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n    <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(categoryInput);\">cancel</a>\n  </form>\n\n</div>\n\n<div class=\"list\">\n\n  <h1 class=\"vs-category-title js-category-title\">Home</h1>\n\n  <div class=\"vs-list-table\">\n    <table style='width: 100%;height:0;'>\n      <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n        <td style=\"height: 100%;\"><div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div></td>\n        <td class='vs-list-item'>\n          <span class='vs-task-description' (dblclick)=\"toggleEdit(task.id, 'task')\">\n            <div class=\"vs-task-title task-{{task.id}}\">{{task.title}}<span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span></div>\n            <input #editTaskInput class=\"vs-task-title task-{{task.id}}-input\" (keydown)=\"updateTask($event, task.id);\" style=\"display:none; width:100%;\" type=\"text\"/>\n          </span>\n        </td>\n        <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n      </tr>\n    </table>\n  </div>\n\n  <form (keydown)=\"addTask(taskInput, startDateInput, endDateInput, $event);\">\n      <input #taskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Description\"/>\n      <input #startDateInput class=\"flatpickrStart vs-flatpickr-start\" placeholder=\"Start Date\" type=\"datetime-local\" step=\"any\"/>\n      <input #endDateInput class=\"flatpickrEnd vs-flatpickr-end\" placeholder=\"End Date\" type=\"datetime-local\" step=\"any\"/>\n  </form>\n\n  <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(taskInput, startDateInput, endDateInput, $event);\"><i class=\"fa fa-plus\" aria-hidden=\"true\"></i></button>\n\n</div>"
 
 /***/ },
 
@@ -271,9 +271,9 @@ var ListComponent = (function () {
         this.initializeCategories();
         this.initializeCategoryTasks(true);
     };
-    ListComponent.prototype.initializeCategoryTasks = function (firstLoad) {
+    ListComponent.prototype.initializeCategoryTasks = function (isFirstLoad) {
         if (!this.selectedCategoryId) {
-            this.initializeAllTasks(firstLoad);
+            this.initializeAllTasks(isFirstLoad);
         }
         else {
             var that = this;
@@ -281,49 +281,42 @@ var ListComponent = (function () {
                 that.tasks.length = 0;
                 var tasks = JSON.parse(response._body);
                 for (var i = 0; i < tasks.length; i++) {
-                    var date = new Date();
-                    var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
-                    if (Date.parse(tasks[i].end) < (date.getTime() - offsetInMillis)) {
-                        tasks[i].overdue = true;
-                    }
+                    tasks[i] = that.appendIfOverdue(tasks[i]);
                     that.insertIntoTasksObject(tasks[i]);
                 }
             });
         }
     };
-    ListComponent.prototype.initializeAllTasks = function (firstLoad) {
+    ListComponent.prototype.initializeAllTasks = function (isFirstLoad) {
         var that = this;
         $.when(this.taskService.getTasksForUser(localStorage.getItem("user_id"))).done(function (response) {
             var tasks = JSON.parse(response._body);
             that.tasks.length = 0;
             for (var i = 0; i < tasks.length; i++) {
-                var date = new Date();
-                var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
-                if (Date.parse(tasks[i].end) < (date.getTime() - offsetInMillis)) {
-                    tasks[i].overdue = true;
-                }
+                tasks[i] = that.appendIfOverdue(tasks[i]);
                 that.insertIntoTasksObject(tasks[i]);
-                if (firstLoad) {
+                if (isFirstLoad) {
                     that.calendarService.appendTaskToCalendar(tasks[i]);
                 }
             }
         });
     };
+    ListComponent.prototype.appendIfOverdue = function (task) {
+        var date = new Date();
+        var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
+        if (Date.parse(task.end) < (date.getTime() - offsetInMillis)) {
+            task.overdue = true;
+        }
+        return task;
+    };
     ListComponent.prototype.addTask = function (taskInput, startDateInput, endDateInput, event) {
+        var that = this;
         if (event.keyCode == 13 || event.type === "click") {
             if (taskInput.value && startDateInput.value && endDateInput.value) {
                 if (Date.parse(startDateInput.value) < Date.parse(endDateInput.value)) {
-                    var that = this;
-                    var backgroundColor = this.colors[Math.floor(Math.random() * 4)];
-                    var url = null; // placeholder
-                    var task = new __WEBPACK_IMPORTED_MODULE_1__models_task__["a" /* Task */](null, taskInput.value, taskInput.value, startDateInput.value, endDateInput.value, url, parseInt(this.selectedCategoryId), parseInt(localStorage.getItem("user_id")), backgroundColor, false); // gotta change this to category id
+                    var task = new __WEBPACK_IMPORTED_MODULE_1__models_task__["a" /* Task */](null, taskInput.value, taskInput.value, startDateInput.value, endDateInput.value, null, parseInt(this.selectedCategoryId), parseInt(localStorage.getItem("user_id")), this.colors[Math.floor(Math.random() * 4)], false);
                     $.when(this.taskService.createTask(task)).done(function (response) {
-                        var realTask = JSON.parse(response._body);
-                        var date = new Date();
-                        var offsetInMillis = date.getTimezoneOffset() * 60 * 1000;
-                        if (Date.parse(realTask.end) < (date.getTime() - offsetInMillis)) {
-                            realTask.overdue = true;
-                        }
+                        var realTask = that.appendIfOverdue(JSON.parse(response._body));
                         that.insertIntoTasksObject(realTask);
                         that.calendarService.appendTaskToCalendar(realTask); // this passes the task ID as the fullcalendarID
                         taskInput.value = startDateInput.value = endDateInput.value = null;
@@ -350,7 +343,7 @@ var ListComponent = (function () {
             }
             if ((afterPrevious || i === this.tasks.length) && (beforeNext || i === this.tasks.length)) {
                 this.tasks.splice(i, 0, task);
-                break; // only insert 1 task
+                break;
             }
         }
     };
@@ -363,7 +356,6 @@ var ListComponent = (function () {
             }
         }
     };
-    // category logic
     ListComponent.prototype.initializeCategories = function () {
         var that = this;
         $.when(this.categoryService.getCategoriesForUser(localStorage.getItem("user_id"))).done(function (response) {
@@ -374,14 +366,14 @@ var ListComponent = (function () {
         });
     };
     ListComponent.prototype.addCategory = function (categoryInput, event) {
+        var that = this;
         if (event.keyCode == 13 || event.type === "click") {
             if (categoryInput.value) {
-                var that_1 = this;
                 var category = new __WEBPACK_IMPORTED_MODULE_2__models_category__["a" /* Category */](null, categoryInput.value, parseInt(localStorage.getItem("user_id")));
                 $.when(this.categoryService.createCategory(category)).done(function (response) {
                     var realCategory = JSON.parse(response._body);
-                    that_1.categories.push(realCategory);
-                    that_1.hideCategoryInput(realCategory);
+                    that.categories.push(realCategory);
+                    that.hideCategoryInput(realCategory);
                     categoryInput.value = null;
                 });
             }
@@ -394,23 +386,38 @@ var ListComponent = (function () {
         if (!category) {
             this.initializeAllTasks(false);
             this.selectedCategoryId = null;
-            $('.js-category-title').text('Home'); // don't hardcode strings, refactor
+            $('.js-category-title').text('Home'); // don't hardcode strings
         }
         else {
-            this.selectedCategoryId = category.id;
             this.initializeCategoryTasks(false);
+            this.selectedCategoryId = category.id;
             $('.js-category-title').text(category.name);
         }
-        // toggle active css
         this.clearActiveCategories();
         $(event.currentTarget).addClass('active');
     };
-    ListComponent.prototype.toggleCategoryEdit = function (category_id) {
-        $("." + category_id).toggleClass('display-none');
-        $("." + category_id + "-input").toggleClass('display-inline');
-        if ($("." + category_id + "-input").hasClass('display-inline')) {
-            $("." + category_id + "-input").val("");
-            $("." + category_id + "-input").focus();
+    ListComponent.prototype.toggleEdit = function (id, type) {
+        var prev, inputBox;
+        if (type === "category") {
+            prev = $(".category-" + id);
+            inputBox = $(".category-" + id + "-input");
+        }
+        else {
+            prev = $(".task-" + id);
+            inputBox = $(".task-" + id + "-input");
+        }
+        prev.toggleClass('display-none');
+        if (type === "category") {
+            inputBox.toggleClass('display-inline');
+            if (inputBox.hasClass('display-inline')) {
+                inputBox.val(prev.text()).focus();
+            }
+        }
+        else if (type === "task") {
+            inputBox.toggleClass('display-block');
+            if (inputBox.hasClass('display-block')) {
+                inputBox.val(prev.clone().children().remove().end().text()).focus();
+            }
         }
     };
     ListComponent.prototype.updateCategory = function (event, category_id) {
@@ -419,10 +426,31 @@ var ListComponent = (function () {
                 var params = { 'name': $(event.currentTarget).val() };
                 this.categoryService.updateCategory(category_id, params); // doesn't need to wait for server response
                 this.updateCategorySuperficially(category_id, $(event.currentTarget).val());
-                this.toggleCategoryEdit(category_id);
+                this.toggleEdit(category_id, 'category');
             }
             else {
                 bootbox.alert('Category name must not be empty');
+            }
+        }
+    };
+    ListComponent.prototype.updateTask = function (event, task_id) {
+        if (event.keyCode == 13) {
+            if ($(event.currentTarget).val()) {
+                var params = { 'title': $(event.currentTarget).val() };
+                this.taskService.updateTask(task_id, params); // doesn't need to wait for server response
+                this.updateTaskSuperficially(task_id, $(event.currentTarget).val());
+                this.toggleEdit(task_id, 'task');
+            }
+            else {
+                bootbox.alert('Task title must not be empty');
+            }
+        }
+    };
+    ListComponent.prototype.updateTaskSuperficially = function (task_id, title) {
+        for (var i = 0; i < this.tasks.length; i++) {
+            if (this.tasks[i].id === task_id) {
+                this.tasks[i].title = title;
+                return;
             }
         }
     };
@@ -435,8 +463,8 @@ var ListComponent = (function () {
         }
     };
     ListComponent.prototype.deleteCategory = function (category, event) {
-        event.stopPropagation(); // click event propagation was killing me
         var that = this;
+        event.stopPropagation();
         bootbox.confirm("Are you sure you want to delete category: " + category.name + "?", function (response) {
             if (response) {
                 if (category.id === that.selectedCategoryId) {
@@ -1276,6 +1304,13 @@ var TaskService = (function () {
     TaskService.prototype.deleteTask = function (task_id) {
         return this.http
             .delete("https://calm-inlet-47809.herokuapp.com/tasks/" + task_id)
+            .toPromise()
+            .then(this.extractData)
+            .catch(this.handleError);
+    };
+    TaskService.prototype.updateTask = function (task_id, params) {
+        return this.http
+            .patch("https://calm-inlet-47809.herokuapp.com/tasks/" + task_id, params)
             .toPromise()
             .then(this.extractData)
             .catch(this.handleError);
