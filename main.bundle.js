@@ -476,6 +476,9 @@ var ListComponent = (function () {
             }
             this.taskService.updateTask(id, params).subscribe(function (task) {
                 _this.updateTaskSuperficially(task);
+                $('#listModal').modal('hide');
+            }, function (err) {
+                bootbox.alert('Something went wrong :(');
             });
         }
         else {
