@@ -24,7 +24,7 @@ module.exports = "/* ********************** LIST CODE ********************** */\
 /***/ 1007:
 /***/ function(module, exports) {
 
-module.exports = "@media (max-width: 768px) {\n    .vs-logo {\n        font-size: 30vw;\n        color: white;\n        margin-top: 20vh;\n        margin-left: 10vw;\n        display: inline-block;\n    }\n}\n\n@media (min-width: 768px) {\n    .vs-logo {\n        font-size: 30vw;\n        color: white;\n        margin-top: 10vh;\n        margin-left: 10vw;\n        display: inline-block;\n    }\n}\n\n.vs-login {\n    background-color: #D84D20;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: fixed;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    overflow: scroll;\n}\n\n.vs-login-button {\n    display: block;\n    text-align: center;\n    margin: auto;\n    margin-top: 5vh;\n    margin-bottom: 50px;\n    border-radius: 5px;\n    font-weight: 200;\n    border: none;\n    background-color: white;\n    color: #D84D20;\n}\n\n.vs-login-button:hover {\n    background-color: #D84D20;\n    color: white;\n    font-weight: 700;\n}\n\n.vs-site-description {\n    margin-left: 30vw;\n    font-size: 2vh;\n    display: block;\n    margin-right: 50px;\n}"
+module.exports = "@media (max-width: 768px) {\n    .vs-logo {\n        font-size: 25vw;\n        color: white;\n        margin-top: 20vh;\n        margin-left: 10vw;\n        display: inline-block;\n    }\n}\n\n@media (min-width: 768px) {\n    .vs-logo {\n        font-size: 25vw;\n        color: white;\n        margin-top: 10vh;\n        margin-left: 10vw;\n        display: inline-block;\n    }\n}\n\n.vs-login {\n    background-color: #D84D20;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: fixed;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    overflow: scroll;\n}\n\n.vs-login-button {\n    display: block;\n    text-align: center;\n    margin: auto;\n    margin-top: 5vh;\n    margin-bottom: 50px;\n    border-radius: 5px;\n    font-weight: 200;\n    border: none;\n    background-color: white;\n    color: #D84D20;\n}\n\n.vs-login-button:hover {\n    background-color: #D84D20;\n    color: white;\n    font-weight: 700;\n}\n\n.vs-site-description {\n    margin-left: 30vw;\n    font-size: 2vh;\n    display: block;\n    margin-right: 50px;\n}"
 
 /***/ },
 
@@ -267,16 +267,16 @@ var ListComponent = (function () {
     ListComponent.prototype.ngOnInit = function () {
         this.initializeUI();
         this.initializeCategories();
-        this.fetchTasks(true);
+        this.fetchTasks(true, null, null);
     };
     ListComponent.prototype.initializeUI = function () {
         flatpickr('.flatpickrStart', { utc: true, enableTime: true });
         flatpickr('.flatpickrEnd', { utc: true, enableTime: true });
         $('.js-category-description').toggleClass('active');
     };
-    ListComponent.prototype.fetchTasks = function (firstLoad) {
+    ListComponent.prototype.fetchTasks = function (firstLoad, boundCategoryTitle, category) {
         if (!this.selectedCategoryId) {
-            this.fetchHomeTasks(firstLoad);
+            this.fetchHomeTasks(firstLoad, boundCategoryTitle);
         }
         else {
             var that_1 = this;
@@ -285,10 +285,13 @@ var ListComponent = (function () {
                 for (var i = 0; i < tasks.length; i++) {
                     that_1.insertIntoTasksObject(tasks[i]);
                 }
+                if (boundCategoryTitle) {
+                    boundCategoryTitle.textContent = category;
+                }
             });
         }
     };
-    ListComponent.prototype.fetchHomeTasks = function (firstLoad) {
+    ListComponent.prototype.fetchHomeTasks = function (firstLoad, boundCategoryTitle) {
         var that = this;
         this.taskService.getTasksForUser(localStorage.getItem("user_id")).subscribe(function (tasks) {
             that.tasks = [];
@@ -296,6 +299,9 @@ var ListComponent = (function () {
                 that.insertIntoTasksObject(tasks[i]);
                 if (firstLoad) {
                     that.calendarService.appendTaskToCalendar(tasks[i]);
+                }
+                if (boundCategoryTitle) {
+                    boundCategoryTitle.textContent = "Home";
                 }
             }
         });
@@ -381,13 +387,11 @@ var ListComponent = (function () {
     ListComponent.prototype.selectCategory = function (element, boundCategoryTitle, category) {
         if (!category) {
             this.selectedCategoryId = null;
-            this.fetchHomeTasks(false);
-            boundCategoryTitle.textContent = "Home";
+            this.fetchHomeTasks(false, boundCategoryTitle);
         }
         else {
             this.selectedCategoryId = category.id;
-            this.fetchTasks(false);
-            boundCategoryTitle.textContent = category.name;
+            this.fetchTasks(false, boundCategoryTitle, category.name);
         }
         this.setActiveCategory(element);
     };
@@ -484,7 +488,7 @@ var ListComponent = (function () {
                             that.categories.splice(i, 1);
                         }
                     }
-                    that.fetchTasks(false);
+                    that.fetchTasks(false, null, null); // this will cause category tasks to load twice
                 });
             }
         });
