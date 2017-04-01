@@ -1,107 +1,107 @@
-webpackJsonp([0,4],{
+webpackJsonp([1,4],{
 
-/***/ 1004:
+/***/ 1016:
 /***/ function(module, exports) {
 
 module.exports = "@media (max-width: 992px) {\n    .vs-calendar {\n        position: relative;\n        display: block;\n        padding: 20px;\n        background-color: #f5f5f5;\n        width: 100%;\n        height: 100vh;\n    }\n}\n\n@media (min-width: 992px) {\n    .vs-calendar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 700px;\n        display: block;\n        padding: 20px;\n        background-color: #f5f5f5;\n        width: calc(100% - 700px);\n    }\n}\n\n.vs-calendar-container {\n    height: calc(100vh - 250px);\n}"
 
 /***/ },
 
-/***/ 1005:
-/***/ function(module, exports) {
-
-module.exports = ".vs-footer {\n    margin: 0;\n    padding: 5px;\n    text-align: center;\n    background-color: #2c6bd6;\n    opacity: 0.5;\n    position: fixed;\n    bottom: 0px;\n    width: 100%;\n    z-index: 1000;\n}\n\n.vs-footer > p {\n    color: white;\n    margin: 0;\n}"
-
-/***/ },
-
-/***/ 1006:
-/***/ function(module, exports) {
-
-module.exports = "/* ********************** LIST CODE ********************** */\n@media (max-width: 768px) {\n    .list {\n        position: relative;\n        display: block;\n        padding: 20px;\n        background-color: white;\n        width: 100%;\n        margin: auto;\n        padding-top: 5vh;\n        height: 100vh;\n    }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n    .list {\n        position: relative;\n        display: block;\n        padding: 20px;\n        background-color: white;\n        width: 80%;\n        margin: auto;\n        padding-top: 5vh;\n        height: 100vh;\n    }\n}\n@media (min-width: 992px) {\n    .list {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 300px;\n        display: block;\n        padding: 20px;\n        background-color: white;\n        border-right: 1px solid #eee;\n        width: 400px;\n    }\n}\n.vs-list-item {\n    width: calc(100% - 100px);\n    padding: 8px 3px;\n}\n.vs-list {\n    padding: 5px;\n    margin-bottom: 150px;\n}\n.vs-task-circle {\n    margin-right: 20px;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    border: 2px solid #f3f3f3;\n}\n    .vs-task-circle:hover {\n        background-color: black;\n    }\n.vs-task-description {\n    padding-bottom: 5px;\n}\n.vs-task-input {\n    position: absolute;\n    display: block;\n    width: calc(100% - 40px);\n    bottom: 125px;\n    border: 1px solid #f2f2f2;\n    padding: 5px;\n    font-size: 13px;\n    text-align: center;\n}\n.vs-task-title {\n    font-weight: 100;\n    font-size: 1em;\n}\n.vs-task-start {\n    width: 70px;\n    height: 100%;\n    font-size: 0.8em;\n    text-align: center;\n}\n.vs-edit-button {\n    height: 100%;\n    vertical-align: center;\n    font-size: 0.7em;\n}\n.vs-task-button {\n    position: absolute;\n    display: inline-block;\n    bottom: 59px;\n    left: 20px;\n    width: calc(100% - 40px);\n    background-color: #D84D20;\n    border-radius: 0px;\n    padding: 10px;\n    border: none;\n    font-size: 0.8em;\n    font-weight: lighter;\n}\n.vs-list-table {\n    max-height: calc(100vh - 300px);\n    overflow-y: scroll;\n}\n.vs-overdue {\n    color: red;\n    font-weight: 700;\n    padding-left: 10px;\n    font-style: italic;\n    font-size: 0.8em;\n}\n\n/* ********************* sidebar code *********************** */\n@media (max-width: 768px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 100%;\n        margin: auto;\n    }\n    .vs-category-inline-input {\n        padding-left: 5px;\n        width: calc(100% - 20px);\n    }\n    .vs-category-inline-container {\n        width: calc(100% - 40px);\n    }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-left: 10%;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 80%;\n        margin: auto;\n    }\n    .vs-category-inline-input {\n        padding-left: 5px;\n        width: calc(100% - 20px);\n    }\n    .vs-category-inline-container {\n        width: calc(100% - 40px);\n    }\n}\n\n@media (min-width: 992px) {\n    .sidebar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 0;\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n        width: 300px;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n    }\n    .vs-category-inline-input {\n        padding-left: 5px;\n        width: 170px;\n    }\n}\n\n.vs-category {\n    padding: 0px;\n}\n    .sidebar .active {\n        background-color: white;\n    }\n\n.vs-category-description {\n    font-weight: 600;\n    display: inline-block;\n    border-top-right-radius: 20px;\n    border-bottom-right-radius: 20px;\n    width: calc(100% - 20px);\n    padding: 5px;\n}\n    .vs-category-description:hover {\n        background-color: white;\n        cursor: pointer;\n    }\n\n.vs-category-add {\n    display: inline-block;\n    padding-left: 10px;\n    color: #D84D20;\n    font-weight: 100;\n    font-size: 0.8em;\n}\n\n.vs-category-input {\n    display: none;\n    margin-left: 10px;\n}\n\n.vs-category-input-cancel {\n    display: none;\n    color: black;\n    margin-left: 50px;\n    font-weight: 100;\n}\n    .vs-category-input-cancel:hover {\n        text-decoration: underline;\n    }\n\n.vs-category-title {\n    text-align: left;\n    font-weight: 700;\n    padding-left: 20px;\n    padding-bottom: 20px;\n    font-size: 1.3em;\n    color: black;\n    border-bottom: 2px solid #f2f2f2;\n    margin-bottom: 0;\n}\n\n#categoryDropDownMenu:active {\n    -webkit-transform: scale(1.7);\n            transform: scale(1.7);\n}\n\n/******************************* edit in place ********************************/\n.display-none {\n    display: none !important;\n}\n.display-inline {\n    display: inline-block !important;\n}\n.display-block {\n    display: block !important;\n}"
-
-/***/ },
-
-/***/ 1007:
-/***/ function(module, exports) {
-
-module.exports = "@media (max-width: 768px) {\n    .vs-logo {\n        font-size: 25vw;\n        color: white;\n        margin-top: 20vh;\n        margin-left: 10vw;\n        display: inline-block;\n    }\n}\n\n@media (min-width: 768px) {\n    .vs-logo {\n        font-size: 25vw;\n        color: white;\n        margin-top: 10vh;\n        margin-left: 10vw;\n        display: inline-block;\n    }\n}\n\n.vs-login {\n    background-color: #D84D20;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: fixed;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    overflow: scroll;\n}\n\n.vs-login-button {\n    display: block;\n    text-align: center;\n    margin: auto;\n    margin-top: 5vh;\n    margin-bottom: 50px;\n    border-radius: 5px;\n    font-weight: 200;\n    border: none;\n    background-color: white;\n    color: #D84D20;\n}\n\n.vs-login-button:hover {\n    background-color: #D84D20;\n    color: white;\n    font-weight: 700;\n}\n\n.vs-site-description {\n    margin-left: 30vw;\n    font-size: 2vh;\n    display: block;\n    margin-right: 50px;\n}"
-
-/***/ },
-
-/***/ 1008:
-/***/ function(module, exports) {
-
-module.exports = ""
-
-/***/ },
-
-/***/ 1009:
-/***/ function(module, exports) {
-
-module.exports = ".navbar {\n    background-color: #2c6bd6;\n    padding: 5px 20vw;\n}\n\n.vs-nav-icon {\n    color: white;\n}\n\n.vs-toggle-icon {\n    color: white;\n    border: 0.5px solid white;\n}\n\n.vs-toggler {\n    margin-right: 5vh;\n    line-height: 28px;\n}"
-
-/***/ },
-
-/***/ 1010:
-/***/ function(module, exports) {
-
-module.exports = ""
-
-/***/ },
-
-/***/ 1012:
-/***/ function(module, exports) {
-
-module.exports = "<div class=\"vs-calendar\">\n    <div class=\"vs-calendar-container\">\n        <div class=\"fullcalendar\"></div>\n    </div>\n</div>"
-
-/***/ },
-
-/***/ 1013:
-/***/ function(module, exports) {
-
-module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n    <p>Developmental Version, 2017</p>\n</nav>"
-
-/***/ },
-
-/***/ 1014:
-/***/ function(module, exports) {
-
-module.exports = "<!-- sidebar -->\n<div class=\"sidebar\">\n    <ul class=\"vs-categories\">\n        <li class='vs-category'>\n            <div #boundHome class=\"js-category-description vs-category-description\" (click)=\"selectCategory(boundHome, boundCategoryTitle)\" style=\"color: black;\">\n                <i class=\"fa fa-home\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i>\n                Home\n            </div>\n        </li>\n        <li class='vs-category' *ngFor=\"let category of categories\">\n            <div>\n                <div #boundCategory (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\" class='js-category-description js-category-reselect-{{category.id}} vs-category-description'>\n                    <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n                    <p class=\"category-{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n                    <span class=\"category-{{category.id}}-container vs-category-inline-container\" style=\"display:none;\">\n                        <input class=\"category-{{category.id}}-input vs-category-inline-input\" (keydown)=\"updateCategory($event, category.id, boundCategoryTitle);\" type=\"text\" maxlength=\"35\"/>\n                        <i class=\"fa fa-times\" (click)=\"editCategory(category.id)\" style=\"padding-top: 5px;\"></i>\n                    </span>\n                </div>\n                <div class=\"dropdown\" style=\"float: right; line-height: 1.5em; padding: 5px;\">\n                    <a class=\"fa fa-caret-down\" id=\"categoryDropDownMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"></a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"categoryDropDownMenu\">\n                        <a class=\"dropdown-item\" (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\">Select</a>\n                        <a class=\"dropdown-item\" (click)=\"editCategory(category.id)\">Edit</a>\n                        <a class=\"dropdown-item\" (click)=\"deleteCategory(category);\">Delete</a>\n                    </div>\n                </div>\n            </div>\n        </li>\n    </ul>\n    <form (keydown)=\"addCategory(boundCategoryInput, $event);\" class=\"js-category-form vs-category-form\">\n        <a href=\"javascript:void(0);\">\n            <i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i>\n        </a>\n        <a href=\"javascript:void(0);\">\n            <p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p>\n        </a>\n        <input #boundCategoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n        <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(boundCategoryInput);\">cancel</a>\n    </form>\n</div>\n\n<!-- list -->\n<div class=\"list\">\n    <h1 #boundCategoryTitle class=\"vs-category-title js-category-title\">Home</h1>\n    <div class=\"vs-list-table\">\n        <table style='width: 100%;height:0;'>\n            <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n                <td style=\"height: 100%;\">\n                    <div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div>\n                </td>\n                <td class='vs-list-item'>\n                    <span class='vs-task-description'>\n                        <div class=\"vs-task-title task-{{task.id}}\">\n                            {{task.title}}\n                            <span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span>\n                        </div>\n                    </span>\n                </td>\n                <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n                <td class='vs-edit-button' data-toggle=\"modal\" data-target=\"#listModal\" [attr.data-taskid]=\"task.id\" [attr.data-title]=\"task.title\">\n                    <i class=\"fa fa-edit\"></i>\n                </td>\n            </tr>\n        </table>\n    </div>\n    <form (keydown)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <input #boundTaskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Description\"/>\n        <input #boundStartDateInput class=\"flatpickrStart vs-flatpickr-start\" placeholder=\"Start Date\" type=\"datetime-local\" step=\"any\"/>\n        <input #boundEndDateInput class=\"flatpickrEnd vs-flatpickr-end\" placeholder=\"End Date\" type=\"datetime-local\" step=\"any\"/> <!-- NOTE: need second flatpickr to do two dates -->\n    </form>\n    <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <i class=\"fa fa-plus\" aria-hidden=\"true\"></i>\n    </button>\n</div>\n\n<!-- edit modal -->\n<div class=\"modal fade\" id=\"listModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"listModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"listModalLabel\">Edit Task</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <form>\n                    <div class=\"form-group\">\n                        <label for=\"task-title\" class=\"form-control-label\">Task:</label>\n                        <input #boundModalTitle type=\"text\" class=\"form-control\" id=\"task-title\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"start-date\" class=\"form-control-label\">Start Date:</label>\n                        <input #boundModalStart class=\"form-control flatpickrStart\" id=\"start-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"end-date\" class=\"form-control-label\">End Date:</label>\n                        <input #boundModalEnd class=\"form-control flatpickrEnd\" id=\"end-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                </form>\n            </div>\n            <div #boundHiddenId class=\"hidden-id\" style=\"display:none;\"></div>\n            <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-secondary\" data-dismiss=\"modal\" (click)=\"removeModalValues(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Close</button>\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateTask(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Save</button>\n            </div>\n        </div>\n    </div>\n</div>"
-
-/***/ },
-
-/***/ 1015:
-/***/ function(module, exports) {
-
-module.exports = "<div class=\"vs-login\">\n  <i class=\"vs-logo fa fa-plug\" aria-hidden=\"true\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A convenient, lightweight, scheduling tool.</span></i>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.isAuthenticated()\">Log In or Sign Up</button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.isAuthenticated()\"><a style=\"text-decoration: none\" href=\"../private/(aux:list)\">Continue to PowerList</a></button>\n</div>"
-
-/***/ },
-
-/***/ 1016:
-/***/ function(module, exports) {
-
-module.exports = "<router-outlet></router-outlet>"
-
-/***/ },
-
 /***/ 1017:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-light bg-faded\">\n    <button class=\"navbar-toggler navbar-toggler-right vs-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span>\n            <i class=\"fa fa-bars vs-toggle-icon\" aria-hidden=\"true\"></i>\n        </span>\n    </button>\n    <a class=\"navbar-brand\" href=\"#\" style=\"color: white; font-weight: 700;\">\n        <i class=\"fa fa-plug\" aria-hidden=\"true\" style=\"margin-right: 10px;\"></i>\n        PowerList\n    </a>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\"></ul>\n        <ul class=\"navbar-nav\">\n            <li class=\"nav-item float-xs-right\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link\" href=\"#\" [routerLink]=\"['']\">\n                    <i class=\"fa fa-home vs-nav-icon\" aria-hidden=\"true\"></i>\n                </a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link\" (click)=\"authService.logout()\" *ngIf=\"authService.isAuthenticated()\">\n                    <i class=\"fa fa-sign-out vs-nav-icon\" aria-hidden=\"true\"></i>\n                </a>\n            </li>\n        </ul>\n    </div>\n</nav>"
+module.exports = ".vs-footer {\n    margin: 0;\n    padding: 5px;\n    text-align: center;\n    background-color: #000F14;\n    opacity: 0.5;\n    position: fixed;\n    bottom: 0px;\n    width: 100%;\n    z-index: 1000;\n}\n\n.vs-footer > p {\n    color: white;\n    margin: 0;\n}"
 
 /***/ },
 
 /***/ 1018:
 /***/ function(module, exports) {
 
+module.exports = "/* ********************** LIST CODE ********************** */\n@media (max-width: 768px) {\n    .list {\n        position: relative;\n        display: block;\n        padding: 20px;\n        background-color: white;\n        width: 100%;\n        margin: auto;\n        padding-top: 5vh;\n        height: 100vh;\n    }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n    .list {\n        position: relative;\n        display: block;\n        padding: 20px;\n        background-color: white;\n        width: 80%;\n        margin: auto;\n        padding-top: 5vh;\n        height: 100vh;\n    }\n}\n@media (min-width: 992px) {\n    .list {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 300px;\n        display: block;\n        padding: 20px;\n        background-color: white;\n        border-right: 1px solid #eee;\n        width: 400px;\n    }\n}\n.vs-list-item {\n    width: calc(100% - 100px);\n    padding: 8px 3px;\n}\n.vs-list {\n    padding: 5px;\n    margin-bottom: 150px;\n}\n.vs-task-circle {\n    margin-right: 20px;\n    border-radius: 100%;\n    width: 20px;\n    height: 20px;\n    border: 2px solid #f3f3f3;\n}\n    .vs-task-circle:hover {\n        background-color: #D84D20;\n        box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 1);\n    }\n.vs-task-description {\n    padding-bottom: 5px;\n}\n.vs-task-input {\n    position: absolute;\n    display: block;\n    width: calc(100% - 40px);\n    bottom: 125px;\n    padding: 2px 0;\n    font-size: 13px;\n    text-align: center;\n}\n.vs-task-title {\n    font-weight: 100;\n    font-size: 1em;\n}\n.vs-task-start {\n    width: 70px;\n    height: 100%;\n    font-size: 0.8em;\n    text-align: center;\n}\n.vs-edit-button {\n    height: 100%;\n    vertical-align: center;\n    font-size: 0.7em;\n}\n    .vs-edit-button:hover {\n        -webkit-transform: scale(1.3);\n                transform: scale(1.3);\n    }\n.vs-task-button {\n    position: absolute;\n    display: inline-block;\n    bottom: 55px;\n    left: 14px;\n    width: calc(100% - 38px);\n    border-radius: 0px;\n    border: none;\n    font-size: 0.8em;\n    font-weight: lighter;\n    padding: 7px;\n}\n.vs-list-table {\n    max-height: calc(100% - 190px);\n    border-bottom: 2px solid #f2f2f2;\n    overflow-y: scroll;\n}\n.vs-overdue {\n    color: red;\n    font-weight: 700;\n    padding-left: 10px;\n    font-style: italic;\n    font-size: 0.8em;\n}\n.vs-flatpickr-start {\n    position: absolute;\n    display: inline-block;\n    text-align: center;\n    width: calc(50% - 20px);\n    bottom: 89px;\n    border-right: 1px solid #f2f2f2;\n    border-top: none;\n    font-size: 13px;\n}\n.vs-flatpickr-end {\n    position: absolute;\n    display: inline-block;\n    text-align: center;\n    width: calc(50% - 20px);\n    bottom: 89px;\n    right: 18px;\n    border: none;\n    font-size: 13px;\n}\n\n/* ********************* sidebar code *********************** */\n@media (max-width: 768px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 100%;\n        margin: auto;\n    }\n    .vs-category-inline-input {\n        padding-left: 5px;\n        width: calc(100% - 25px);\n    }\n    .vs-category-inline-container {\n        width: calc(100% - 40px);\n    }\n}\n@media (min-width: 768px) and (max-width: 991px) {\n    .sidebar {\n        position: relative;\n        height: calc(100vh - 50px);\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        padding-top: 5vh;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-left: 10%;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n        width: 80%;\n        margin: auto;\n    }\n    .vs-category-inline-input {\n        padding-left: 5px;\n        width: calc(100% - 20px);\n    }\n    .vs-category-inline-container {\n        width: calc(100% - 40px);\n    }\n}\n\n@media (min-width: 992px) {\n    .sidebar {\n        position: fixed;\n        top: 50px;\n        bottom: 0;\n        left: 0;\n        display: block;\n        padding: 20px;\n        padding-left: 30px;\n        overflow-x: hidden;\n        overflow-y: auto;\n        background-color: #f5f5f5;\n        border-right: 1px solid #eee;\n        width: 300px;\n    }\n    .vs-category-form {\n        padding: 5px;\n        margin-top: 10px;\n    }\n    .vs-categories {\n        list-style: none;\n    }\n    .vs-category-inline-input {\n        padding-left: 5px;\n        width: 157px;\n        box-sizing: border-box;\n        height: 1.2rem;\n    }\n}\n\n.vs-category {\n    padding: 0px;\n}\n    .sidebar .active {\n        background-color: white;\n        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);\n    }\n\n.vs-category-description {\n    font-weight: 600;\n    display: inline-block;\n    width: calc(100% - 20px);\n    padding: 5px;\n    padding-left: 15px;\n    word-wrap: break-word;\n}\n    .vs-category-description:hover {\n        background-color: white;\n        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),0 2px 10px 0 rgba(0,0,0,.12);\n        cursor: pointer;\n    }\n\n.vs-category-add {\n    display: inline-block;\n    padding-left: 10px;\n    color: #D84D20;\n    font-weight: 100;\n    font-size: 0.8em;\n}\n\n.vs-category-input {\n    display: none;\n    margin-left: 10px;\n    width: calc(100% - 50px);\n}\n\n.vs-category-input-cancel {\n    display: none;\n    color: black;\n    margin-left: 50px;\n    font-weight: 100;\n}\n    .vs-category-input-cancel:hover {\n        text-decoration: underline;\n    }\n\n.vs-category-title {\n    text-align: left;\n    font-weight: 700;\n    padding-left: 20px;\n    padding-bottom: 20px;\n    font-size: 1.3em;\n    color: black;\n    border-bottom: 2px solid #f2f2f2;\n    margin-bottom: 0;\n}\n\n#categoryDropDownMenu:active {\n    -webkit-transform: scale(1.7);\n            transform: scale(1.7);\n}\n\n/******************************* edit in place ********************************/\n.display-none {\n    display: none !important;\n}\n.display-inline {\n    display: inline-block !important;\n}\n.display-block {\n    display: block !important;\n}"
+
+/***/ },
+
+/***/ 1019:
+/***/ function(module, exports) {
+
+module.exports = "canvas {\n    position: absolute;\n}\n.vs-title-block {\n    color: white;\n    margin: auto;\n    margin-top: 20vh;\n    text-align: center;\n}\n.vs-login {\n    position: fixed;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    overflow: scroll;\n}\n\n.vs-login-button {\n    display: block;\n    text-align: center;\n    margin: auto;\n    margin-top: 8vh;\n    font-weight: 300;\n    border: none;\n    border-radius: 0px;\n    background-color: white !important;\n    color: black !important;\n}\n    .vs-login-button:hover {\n        background-color: #A1FFFF !important;\n        font-weight: 700;\n    }\n\n.vs-site-description {\n    font-size: 3vh;\n    margin-top: 30px;\n    display: block;\n}"
+
+/***/ },
+
+/***/ 1020:
+/***/ function(module, exports) {
+
+module.exports = ""
+
+/***/ },
+
+/***/ 1021:
+/***/ function(module, exports) {
+
+module.exports = ".navbar {\n    padding: 5px 20vw;\n    background-color: #000F14 !important;\n}\n\n.vs-nav-icon {\n    color: white;\n}\n\n.vs-toggle-icon {\n    color: white;\n    border: 0.5px solid white;\n}\n\n.vs-toggler {\n    margin-right: 5vh;\n    line-height: 28px;\n}\n.navbar.navbar-dark .breadcrumb.active, .navbar.navbar-dark .navbar-nav .nav-item.active {\n    background-color: transparent;\n}"
+
+/***/ },
+
+/***/ 1022:
+/***/ function(module, exports) {
+
+module.exports = ""
+
+/***/ },
+
+/***/ 1026:
+/***/ function(module, exports) {
+
+module.exports = "<div class=\"vs-calendar\">\n    <div class=\"vs-calendar-container\">\n        <div class=\"fullcalendar\"></div>\n    </div>\n</div>"
+
+/***/ },
+
+/***/ 1027:
+/***/ function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n    <p>Developmental Version, 2017</p>\n</nav>"
+
+/***/ },
+
+/***/ 1028:
+/***/ function(module, exports) {
+
+module.exports = "<!-- sidebar -->\n<div class=\"sidebar\">\n    <ul class=\"vs-categories\">\n        <li class='vs-category'>\n            <div #boundHome class=\"js-category-description vs-category-description\" (click)=\"selectCategory(boundHome, boundCategoryTitle)\" style=\"color: black;\">\n                <i class=\"fa fa-home\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i>\n                Home\n            </div>\n        </li>\n        <li class='vs-category' *ngFor=\"let category of categories\">\n            <div>\n                <div #boundCategory (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\" class='js-category-description js-category-reselect-{{category.id}} vs-category-description'>\n                    <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n                    <p class=\"category-{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n                    <span class=\"category-{{category.id}}-container vs-category-inline-container\" style=\"display:none;\">\n                        <input class=\"category-{{category.id}}-input vs-category-inline-input\" (keydown)=\"updateCategory($event, category.id, boundCategoryTitle);\" (click)=\"stopPropagation($event);\" type=\"text\" maxlength=\"35\"/>\n                        <i class=\"fa fa-times\" (click)=\"stopPropagation($event); editCategory(category.id)\" style=\"padding-top: 5px; box-shadow: none; background-color: transparent;\"></i>\n                    </span>\n                </div>\n                <div class=\"dropdown\" style=\"float: right; line-height: 1.5em; padding: 5px;\">\n                    <a class=\"fa fa-caret-down\" id=\"categoryDropDownMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"></a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"categoryDropDownMenu\">\n                        <a class=\"dropdown-item\" (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\">Select</a>\n                        <a class=\"dropdown-item\" (click)=\"editCategory(category.id)\">Edit</a>\n                        <a class=\"dropdown-item\" (click)=\"deleteCategory(category);\">Delete</a>\n                    </div>\n                </div>\n            </div>\n        </li>\n    </ul>\n    <form (keydown)=\"addCategory(boundCategoryInput, $event);\" class=\"js-category-form vs-category-form\">\n        <a href=\"javascript:void(0);\">\n            <i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i>\n        </a>\n        <a href=\"javascript:void(0);\">\n            <p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p>\n        </a>\n        <input #boundCategoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n        <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(boundCategoryInput);\">cancel</a>\n    </form>\n</div>\n\n<!-- list -->\n<div class=\"list\">\n    <h1 #boundCategoryTitle class=\"vs-category-title js-category-title\">Home</h1>\n    <div class=\"vs-list-table\">\n        <table style='width: 100%;height:0;'>\n            <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n                <td style=\"height: 100%;\">\n                    <div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div>\n                </td>\n                <td class='vs-list-item'>\n                    <span class='vs-task-description'>\n                        <div class=\"vs-task-title task-{{task.id}}\">\n                            {{task.title}}\n                            <span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span>\n                        </div>\n                    </span>\n                </td>\n                <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n                <td class='vs-edit-button' data-toggle=\"modal\" data-target=\"#listModal\" [attr.data-taskid]=\"task.id\" [attr.data-title]=\"task.title\">\n                    <i class=\"fa fa-edit\"></i>\n                </td>\n            </tr>\n        </table>\n    </div>\n    <form (keydown)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <input #boundTaskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Add Task\"/>\n        <input #boundStartDateInput class=\"flatpickrStart vs-flatpickr-start vs-date-input\" placeholder=\"&#xf272;\" style=\"font-family: FontAwesome;\" type=\"datetime-local\" step=\"any\"/>\n        <input #boundEndDateInput class=\"flatpickrEnd vs-flatpickr-end vs-date-input\" placeholder=\"&#xf271;\" style=\"font-family: FontAwesome;\" type=\"datetime-local\" step=\"any\"/> <!-- NOTE: need second flatpickr to do two dates -->\n    </form>\n    <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <i class=\"fa fa-plus\" aria-hidden=\"true\"></i>\n    </button>\n</div>\n\n<!-- edit modal -->\n<div class=\"modal fade\" id=\"listModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"listModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"listModalLabel\">Edit Task</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <form>\n                    <div class=\"form-group\">\n                        <label for=\"task-title\" class=\"form-control-label\">Task:</label>\n                        <input #boundModalTitle type=\"text\" class=\"form-control\" id=\"task-title\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"start-date\" class=\"form-control-label\">Start Date:</label>\n                        <input #boundModalStart class=\"form-control flatpickrStart\" id=\"start-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"end-date\" class=\"form-control-label\">End Date:</label>\n                        <input #boundModalEnd class=\"form-control flatpickrEnd\" id=\"end-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                </form>\n            </div>\n            <div #boundHiddenId class=\"hidden-id\" style=\"display:none;\"></div>\n            <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-elegant\" data-dismiss=\"modal\" (click)=\"removeModalValues(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Close</button>\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateTask(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Save</button>\n            </div>\n        </div>\n    </div>\n</div>"
+
+/***/ },
+
+/***/ 1029:
+/***/ function(module, exports) {
+
+module.exports = "<canvas id='c'></canvas>\n<div class=\"vs-login\">\n  <div class=\"vs-title-block\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A lightweight, electrifying task scheduler</span></div>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.isAuthenticated()\">Log In or Sign Up</button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.isAuthenticated()\"><a style=\"text-decoration: none\" href=\"../private/(aux:list)\">Continue to PowerList</a></button>\n</div>"
+
+/***/ },
+
+/***/ 1030:
+/***/ function(module, exports) {
+
+module.exports = "<router-outlet></router-outlet>"
+
+/***/ },
+
+/***/ 1031:
+/***/ function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-toggleable-md navbar-dark bg-primary\">\n    <button class=\"navbar-toggler navbar-toggler-right vs-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n        <span>\n            <i class=\"fa fa-bars vs-toggle-icon\" aria-hidden=\"true\"></i>\n        </span>\n    </button>\n    <a class=\"navbar-brand\" href=\"#\" style=\"color: white; font-weight: 700;\">\n        <i class=\"fa fa-plug\" aria-hidden=\"true\" style=\"margin-right: 10px;\"></i>\n        PowerList\n    </a>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n        <ul class=\"navbar-nav mr-auto\"></ul>\n        <ul class=\"navbar-nav\">\n            <li class=\"nav-item float-xs-right\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link\" href=\"#\" [routerLink]=\"['']\">\n                    <i class=\"fa fa-home vs-nav-icon\" aria-hidden=\"true\"></i>\n                </a>\n            </li>\n            <li class=\"nav-item\" [routerLinkActive]=\"['active']\">\n                <a class=\"nav-link\" (click)=\"authService.logout()\" *ngIf=\"authService.isAuthenticated()\">\n                    <i class=\"fa fa-sign-out vs-nav-icon\" aria-hidden=\"true\"></i>\n                </a>\n            </li>\n        </ul>\n    </div>\n</nav>"
+
+/***/ },
+
+/***/ 1032:
+/***/ function(module, exports) {
+
 module.exports = "<app-navbar></app-navbar>\n\n<div>\n    <app-sidebar></app-sidebar>\n    <router-outlet name=\"aux\"></router-outlet>\n<div>\n\n<app-calendar></app-calendar>\n\n<app-footer></app-footer>"
 
 /***/ },
 
-/***/ 1375:
+/***/ 1413:
 /***/ function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(598);
+module.exports = __webpack_require__(603);
 
 
 /***/ },
@@ -231,12 +231,12 @@ var AppRoutes = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_task__ = __webpack_require__(734);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_category__ = __webpack_require__(733);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__ = __webpack_require__(735);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__ = __webpack_require__(737);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__ = __webpack_require__(736);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_app_colors__ = __webpack_require__(738);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_task__ = __webpack_require__(743);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_category__ = __webpack_require__(742);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__ = __webpack_require__(744);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__ = __webpack_require__(746);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__ = __webpack_require__(745);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_app_colors__ = __webpack_require__(747);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -382,8 +382,9 @@ var ListComponent = (function () {
         if (!(event.keyCode == 13 || event.type === "click")) {
             return;
         }
-        if (categoryInput.value) {
+        if (!categoryInput.value) {
             bootbox.alert('Please enter a category.');
+            return;
         }
         var category = new __WEBPACK_IMPORTED_MODULE_2__models_category__["a" /* Category */](null, categoryInput.value, parseInt(localStorage.getItem("user_id")));
         this.categoryService.createCategory(category).subscribe(function (category) {
@@ -509,6 +510,8 @@ var ListComponent = (function () {
                         }
                     }
                     that.fetchTasks(false, null, null); // this will cause category tasks to load twice
+                }, function (err) {
+                    bootbox.alert('Unable to delete category that has tasks associated with it.');
                 });
             }
         });
@@ -533,8 +536,8 @@ var ListComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-list',
             providers: [__WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */], __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */], __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */]],
-            template: __webpack_require__(1014),
-            styles: [__webpack_require__(1006)]
+            template: __webpack_require__(1028),
+            styles: [__webpack_require__(1018)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */]) === 'function' && _c) || Object])
     ], ListComponent);
@@ -568,13 +571,19 @@ var LoginComponent = (function () {
         this.authService = authService;
     }
     LoginComponent.prototype.ngOnChanges = function () { };
-    LoginComponent.prototype.ngOnInit = function () { };
+    LoginComponent.prototype.ngOnInit = function () {
+        this.initElectricity();
+    };
+    LoginComponent.prototype.initElectricity = function () {
+        var electricity = new Electricity();
+        electricity.init();
+    };
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-login',
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */]],
-            template: __webpack_require__(1015),
-            styles: [__webpack_require__(1007)]
+            template: __webpack_require__(1029),
+            styles: [__webpack_require__(1019)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object])
     ], LoginComponent);
@@ -623,8 +632,8 @@ var PrivateComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-private',
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */]],
-            template: __webpack_require__(1018),
-            styles: [__webpack_require__(1010)]
+            template: __webpack_require__(1032),
+            styles: [__webpack_require__(1022)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === 'function' && _b) || Object])
     ], PrivateComponent);
@@ -640,7 +649,7 @@ var PrivateComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
@@ -683,7 +692,7 @@ var UserService = (function () {
 
 /***/ },
 
-/***/ 597:
+/***/ 602:
 /***/ function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -692,21 +701,21 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 597;
+webpackEmptyContext.id = 602;
 
 
 /***/ },
 
-/***/ 598:
+/***/ 603:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(740);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(698);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__polyfills_ts__ = __webpack_require__(749);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__(707);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(739);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(728);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__(748);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_app_module__ = __webpack_require__(737);
 
 
 
@@ -720,7 +729,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 /***/ },
 
-/***/ 727:
+/***/ 736:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -781,22 +790,22 @@ var AllergyClientRoutingModule = (function () {
 
 /***/ },
 
-/***/ 728:
+/***/ 737:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(689);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__(698);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_jwt__ = __webpack_require__(469);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_jwt__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing_module__ = __webpack_require__(727);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_main_app_component__ = __webpack_require__(731);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__ = __webpack_require__(732);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_footer_footer_component__ = __webpack_require__(730);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routing_module__ = __webpack_require__(736);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_main_app_component__ = __webpack_require__(740);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_navbar_navbar_component__ = __webpack_require__(741);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_footer_footer_component__ = __webpack_require__(739);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_list_list_component__ = __webpack_require__(465);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_calendar_calendar_component__ = __webpack_require__(729);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_calendar_calendar_component__ = __webpack_require__(738);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_login_login_component__ = __webpack_require__(466);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_private_private_component__ = __webpack_require__(467);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_rxjs_Rx__ = __webpack_require__(242);
@@ -869,7 +878,7 @@ var AppModule = (function () {
 
 /***/ },
 
-/***/ 729:
+/***/ 738:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -910,8 +919,8 @@ var CalendarComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-calendar',
             providers: [],
-            template: __webpack_require__(1012),
-            styles: [__webpack_require__(1004)]
+            template: __webpack_require__(1026),
+            styles: [__webpack_require__(1016)]
         }), 
         __metadata('design:paramtypes', [])
     ], CalendarComponent);
@@ -921,7 +930,7 @@ var CalendarComponent = (function () {
 
 /***/ },
 
-/***/ 730:
+/***/ 739:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -944,8 +953,8 @@ var FooterComponent = (function () {
     FooterComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-footer',
-            template: __webpack_require__(1013),
-            styles: [__webpack_require__(1005)]
+            template: __webpack_require__(1027),
+            styles: [__webpack_require__(1017)]
         }), 
         __metadata('design:paramtypes', [])
     ], FooterComponent);
@@ -955,7 +964,7 @@ var FooterComponent = (function () {
 
 /***/ },
 
-/***/ 731:
+/***/ 740:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -982,8 +991,8 @@ var AppComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["Component"])({
             selector: 'app-root',
             providers: [__WEBPACK_IMPORTED_MODULE_0__services_user_service_user_service__["a" /* UserService */]],
-            template: __webpack_require__(1016),
-            styles: [__webpack_require__(1008)]
+            template: __webpack_require__(1030),
+            styles: [__webpack_require__(1020)]
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
@@ -993,7 +1002,7 @@ var AppComponent = (function () {
 
 /***/ },
 
-/***/ 732:
+/***/ 741:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1020,8 +1029,8 @@ var NavbarComponent = (function () {
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-navbar',
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */]],
-            template: __webpack_require__(1017),
-            styles: [__webpack_require__(1009)]
+            template: __webpack_require__(1031),
+            styles: [__webpack_require__(1021)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__["a" /* AuthService */]) === 'function' && _a) || Object])
     ], NavbarComponent);
@@ -1032,7 +1041,7 @@ var NavbarComponent = (function () {
 
 /***/ },
 
-/***/ 733:
+/***/ 742:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1049,7 +1058,7 @@ var Category = (function () {
 
 /***/ },
 
-/***/ 734:
+/***/ 743:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1073,7 +1082,7 @@ var Task = (function () {
 
 /***/ },
 
-/***/ 735:
+/***/ 744:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1108,12 +1117,12 @@ var CalendarService = (function () {
 
 /***/ },
 
-/***/ 736:
+/***/ 745:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
@@ -1177,12 +1186,12 @@ var CategoryService = (function () {
 
 /***/ },
 
-/***/ 737:
+/***/ 746:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(242);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
@@ -1246,7 +1255,7 @@ var TaskService = (function () {
 
 /***/ },
 
-/***/ 738:
+/***/ 747:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1264,7 +1273,7 @@ var Colors = (function () {
 
 /***/ },
 
-/***/ 739:
+/***/ 748:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1280,41 +1289,41 @@ var environment = {
 
 /***/ },
 
-/***/ 740:
+/***/ 749:
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(824);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__ = __webpack_require__(833);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_core_js_es6_symbol__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(817);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__ = __webpack_require__(826);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_core_js_es6_object___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_core_js_es6_object__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(813);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__ = __webpack_require__(822);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_core_js_es6_function___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_core_js_es6_function__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(819);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__ = __webpack_require__(828);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_core_js_es6_parse_int__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(818);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__ = __webpack_require__(827);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_core_js_es6_parse_float__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(816);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__ = __webpack_require__(825);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_core_js_es6_number___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_core_js_es6_number__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(815);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__ = __webpack_require__(824);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_core_js_es6_math___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_core_js_es6_math__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(823);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__ = __webpack_require__(832);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_core_js_es6_string___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_core_js_es6_string__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(812);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__ = __webpack_require__(821);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_core_js_es6_date___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_core_js_es6_date__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(811);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__ = __webpack_require__(820);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_core_js_es6_array___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_core_js_es6_array__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(821);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__ = __webpack_require__(830);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10_core_js_es6_regexp__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(814);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__ = __webpack_require__(823);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11_core_js_es6_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11_core_js_es6_map__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(822);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__ = __webpack_require__(831);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_core_js_es6_set___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_core_js_es6_set__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(820);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__ = __webpack_require__(829);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13_core_js_es6_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(825);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__ = __webpack_require__(834);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_core_js_es7_reflect__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(1374);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__ = __webpack_require__(1412);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15_zone_js_dist_zone__);
 
 
@@ -1336,5 +1345,5 @@ var environment = {
 
 /***/ }
 
-},[1375]);
+},[1413]);
 //# sourceMappingURL=main.bundle.map
