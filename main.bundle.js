@@ -66,7 +66,7 @@ module.exports = "<div class=\"vs-calendar\">\n    <div class=\"vs-calendar-cont
 /***/ 1034:
 /***/ function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n    <p>Developmental Version, 2017</p>\n</nav>"
+module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n    <p>Developmental Version (Web), 2017</p>\n</nav>"
 
 /***/ },
 
