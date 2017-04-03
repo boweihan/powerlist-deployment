@@ -17,7 +17,7 @@ module.exports = ".vs-footer {\n    margin: 0;\n    padding: 5px;\n    text-alig
 /***/ 1023:
 /***/ function(module, exports) {
 
-module.exports = ".graph {\n    position: absolute;\n    top: calc(5vh + 45.5px);\n    bottom: 10vh;\n    left: 5vw;\n    right: 5vw;\n}\n\n.graphBackground {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: whitesmoke;\n}"
+module.exports = ".down {\n    position: absolute;\n    top: calc(5vh + 45.5px);\n    bottom: 50vh;\n    left: 5vw;\n    right: 5vw;\n}\n\n.graphBackground {\n    position: fixed;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    background-color: whitesmoke;\n}\n\n.up {\n    position: absolute;\n    top: 52vh;\n    bottom: 10vh;\n    left: 5vw;\n    right: 5vw;\n}"
 
 /***/ },
 
@@ -73,14 +73,14 @@ module.exports = "<nav class=\"navbar navbar-light bg-faded vs-footer\">\n    <p
 /***/ 1035:
 /***/ function(module, exports) {
 
-module.exports = "<div class='graphBackground'>\n    <div class=\"graph\" id=\"graph\">\n    </div>\n</div>"
+module.exports = "<!-- this should be a shared component -->\n<div class=\"boop\" style='top: 0; bottom: 0; left: 0; right: 0; z-index: 1051; display: none; position: fixed;'></div>\n\n<div class='graphBackground'>\n    <div class=\"up\" id=\"graph\"></div>\n    <div class=\"down\" id=\"pie\"></div>\n</div>"
 
 /***/ },
 
 /***/ 1036:
 /***/ function(module, exports) {
 
-module.exports = "<!-- sidebar -->\n<div class=\"boop\" style='top: 0; bottom: 0; left: 0; right: 0; z-index: 100000000000000; display: none; position: fixed;'>\n</div>\n\n<div class=\"sidebar\">\n    <ul class=\"vs-categories\">\n        <li class='vs-category'>\n            <div #boundHome class=\"js-category-description vs-category-description\" (click)=\"selectCategory(boundHome, boundCategoryTitle)\" style=\"color: black;\">\n                <i class=\"fa fa-home\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i>\n                Home\n            </div>\n        </li>\n        <li class='vs-category' *ngFor=\"let category of categories\">\n            <div>\n                <div #boundCategory (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\" class='js-category-description js-category-reselect-{{category.id}} vs-category-description'>\n                    <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n                    <p class=\"category-{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n                    <span class=\"category-{{category.id}}-container vs-category-inline-container\" style=\"display:none;\">\n                        <input class=\"category-{{category.id}}-input vs-category-inline-input\" (keydown)=\"updateCategory($event, category.id, boundCategoryTitle);\" (click)=\"stopPropagation($event);\" type=\"text\" maxlength=\"35\"/>\n                        <i class=\"fa fa-times\" (click)=\"stopPropagation($event); editCategory(category.id)\" style=\"padding-top: 5px; box-shadow: none; background-color: transparent;\"></i>\n                    </span>\n                </div>\n                <div class=\"dropdown\" style=\"float: right; line-height: 1.5em; padding: 5px;\">\n                    <a class=\"fa fa-caret-down\" id=\"categoryDropDownMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"></a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"categoryDropDownMenu\">\n                        <a class=\"dropdown-item\" (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\">Select</a>\n                        <a class=\"dropdown-item\" (click)=\"editCategory(category.id)\">Edit</a>\n                        <a class=\"dropdown-item\" (click)=\"deleteCategory(category);\">Delete</a>\n                    </div>\n                </div>\n            </div>\n        </li>\n    </ul>\n    <form (keydown)=\"addCategory(boundCategoryInput, $event);\" class=\"js-category-form vs-category-form\">\n        <a href=\"javascript:void(0);\">\n            <i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i>\n        </a>\n        <a href=\"javascript:void(0);\">\n            <p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p>\n        </a>\n        <input #boundCategoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n        <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(boundCategoryInput);\">cancel</a>\n    </form>\n</div>\n\n<!-- list -->\n<div class=\"list\">\n    <h1 #boundCategoryTitle class=\"vs-category-title js-category-title\">Home</h1>\n    <div class=\"vs-list-table\">\n        <table style='width: 100%;height:0;'>\n            <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n                <td style=\"height: 100%;\">\n                    <div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div>\n                </td>\n                <td class='vs-list-item'>\n                    <span class='vs-task-description'>\n                        <div class=\"vs-task-title task-{{task.id}}\">\n                            {{task.title}}\n                            <span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span>\n                        </div>\n                    </span>\n                </td>\n                <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n                <td class='vs-edit-button' data-toggle=\"modal\" data-target=\"#listModal\" [attr.data-taskid]=\"task.id\" [attr.data-title]=\"task.title\">\n                    <i class=\"fa fa-edit\"></i>\n                </td>\n            </tr>\n        </table>\n    </div>\n    <form (keydown)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <input #boundTaskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Add Task\"/>\n        <input #boundStartDateInput class=\"flatpickrStart vs-flatpickr-start vs-date-input\" placeholder=\"&#xf272;\" style=\"font-family: FontAwesome;\" type=\"datetime-local\" step=\"any\"/>\n        <input #boundEndDateInput class=\"flatpickrEnd vs-flatpickr-end vs-date-input\" placeholder=\"&#xf271;\" style=\"font-family: FontAwesome;\" type=\"datetime-local\" step=\"any\"/> <!-- NOTE: need second flatpickr to do two dates -->\n    </form>\n    <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <i class=\"fa fa-plus\" aria-hidden=\"true\"></i>\n    </button>\n</div>\n\n<!-- edit modal -->\n<div class=\"modal fade\" id=\"listModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"listModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"listModalLabel\">Edit Task</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <form>\n                    <div class=\"form-group\">\n                        <label for=\"task-title\" class=\"form-control-label\">Task:</label>\n                        <input #boundModalTitle type=\"text\" class=\"form-control\" id=\"task-title\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"start-date\" class=\"form-control-label\">Start Date:</label>\n                        <input #boundModalStart class=\"form-control flatpickrStart\" id=\"start-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"end-date\" class=\"form-control-label\">End Date:</label>\n                        <input #boundModalEnd class=\"form-control flatpickrEnd\" id=\"end-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                </form>\n            </div>\n            <div #boundHiddenId class=\"hidden-id\" style=\"display:none;\"></div>\n            <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-elegant\" data-dismiss=\"modal\" (click)=\"removeModalValues(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Close</button>\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateTask(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Save</button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<app-calendar></app-calendar>"
+module.exports = "<!-- sidebar -->\n<div class=\"boop\" style='top: 0; bottom: 0; left: 0; right: 0; z-index: 1051; display: none; position: fixed;'></div>\n\n<div class=\"sidebar\">\n    <ul class=\"vs-categories\">\n        <li class='vs-category'>\n            <div #boundHome class=\"js-category-description vs-category-description\" (click)=\"selectCategory(boundHome, boundCategoryTitle)\" style=\"color: black;\">\n                <i class=\"fa fa-home\" aria-hidden=\"true\" style=\"padding-right: 15px; font-weight: 700;\"></i>\n                Home\n            </div>\n        </li>\n        <li class='vs-category' *ngFor=\"let category of categories\">\n            <div>\n                <div #boundCategory (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\" class='js-category-description js-category-reselect-{{category.id}} vs-category-description'>\n                    <i class=\"fa fa-location-arrow\" aria-hidden=\"true\" style=\"padding-right: 15px; line-height: 1.5em;\"></i>\n                    <p class=\"category-{{category.id}}\" style=\"display:inline-block; margin:0; padding:0;\">{{category.name}}</p>\n                    <span class=\"category-{{category.id}}-container vs-category-inline-container\" style=\"display:none;\">\n                        <input class=\"category-{{category.id}}-input vs-category-inline-input\" (keydown)=\"updateCategory($event, category.id, boundCategoryTitle);\" (click)=\"stopPropagation($event);\" type=\"text\" maxlength=\"35\"/>\n                        <i class=\"fa fa-times\" (click)=\"stopPropagation($event); editCategory(category.id)\" style=\"padding-top: 5px; box-shadow: none; background-color: transparent;\"></i>\n                    </span>\n                </div>\n                <div class=\"dropdown\" style=\"float: right; line-height: 1.5em; padding: 5px;\">\n                    <a class=\"fa fa-caret-down\" id=\"categoryDropDownMenu\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\"></a>\n                    <div class=\"dropdown-menu dropdown-menu-right\" aria-labelledby=\"categoryDropDownMenu\">\n                        <a class=\"dropdown-item\" (click)=\"selectCategory(boundCategory, boundCategoryTitle, category)\">Select</a>\n                        <a class=\"dropdown-item\" (click)=\"editCategory(category.id)\">Edit</a>\n                        <a class=\"dropdown-item\" (click)=\"deleteCategory(category);\">Delete</a>\n                    </div>\n                </div>\n            </div>\n        </li>\n    </ul>\n    <form (keydown)=\"addCategory(boundCategoryInput, $event);\" class=\"js-category-form vs-category-form\">\n        <a href=\"javascript:void(0);\">\n            <i class=\"fa fa-plus\" (click)=\"showCategoryInput();\" aria-hidden=\"true\" style='color: #D84D20; padding-left: 20px;'></i>\n        </a>\n        <a href=\"javascript:void(0);\">\n            <p class=\"js-category-label vs-category-add\" (click)=\"showCategoryInput();\">Add Category</p>\n        </a>\n        <input #boundCategoryInput type=\"text\" class=\"js-category-input vs-category-input\" maxlength=\"35\"/><br> <!-- force max length for now -->\n        <a href=\"javascript:void(0);\" class=\"js-category-input vs-category-input-cancel\" (click)=\"hideCategoryInput(boundCategoryInput);\">cancel</a>\n    </form>\n</div>\n\n<!-- list -->\n<div class=\"list\">\n    <h1 #boundCategoryTitle class=\"vs-category-title js-category-title\">Home</h1>\n    <div class=\"vs-list-table\">\n        <table style='width: 100%;height:0;'>\n            <tr style=\"border-bottom: 1px solid #f2f2f2;\" *ngFor=\"let task of tasks\">\n                <td style=\"height: 100%;\">\n                    <div class=\"vs-task-circle\" (click)=\"removeTask(task);\"></div>\n                </td>\n                <td class='vs-list-item'>\n                    <span class='vs-task-description'>\n                        <div class=\"vs-task-title task-{{task.id}}\">\n                            {{task.title}}\n                            <span class=\"vs-overdue\" *ngIf=\"task.overdue\">(overdue)</span>\n                        </div>\n                    </span>\n                </td>\n                <td class='vs-task-start'>{{task.start | date:'MMM dd'}}</td>\n                <td class='vs-edit-button' data-toggle=\"modal\" data-target=\"#listModal\" [attr.data-taskid]=\"task.id\" [attr.data-title]=\"task.title\">\n                    <i class=\"fa fa-edit\"></i>\n                </td>\n            </tr>\n        </table>\n    </div>\n    <form (keydown)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <input #boundTaskInput type=\"text\" class=\"vs-task-input\" placeholder=\"Add Task\"/>\n        <input #boundStartDateInput class=\"flatpickrStart vs-flatpickr-start vs-date-input\" placeholder=\"&#xf272;\" style=\"font-family: FontAwesome;\" type=\"datetime-local\" step=\"any\"/>\n        <input #boundEndDateInput class=\"flatpickrEnd vs-flatpickr-end vs-date-input\" placeholder=\"&#xf271;\" style=\"font-family: FontAwesome;\" type=\"datetime-local\" step=\"any\"/> <!-- NOTE: need second flatpickr to do two dates -->\n    </form>\n    <button class='vs-task-button btn btn-lg btn-primary' (click)=\"addTask(boundTaskInput, boundStartDateInput, boundEndDateInput, $event);\">\n        <i class=\"fa fa-plus\" aria-hidden=\"true\"></i>\n    </button>\n</div>\n\n<!-- edit modal -->\n<div class=\"modal fade\" id=\"listModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"listModalLabel\" aria-hidden=\"true\">\n    <div class=\"modal-dialog\" role=\"document\">\n        <div class=\"modal-content\">\n            <div class=\"modal-header\">\n                <h5 class=\"modal-title\" id=\"listModalLabel\">Edit Task</h5>\n                <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\">\n                    <span aria-hidden=\"true\">&times;</span>\n                </button>\n            </div>\n            <div class=\"modal-body\">\n                <form>\n                    <div class=\"form-group\">\n                        <label for=\"task-title\" class=\"form-control-label\">Task:</label>\n                        <input #boundModalTitle type=\"text\" class=\"form-control\" id=\"task-title\">\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"start-date\" class=\"form-control-label\">Start Date:</label>\n                        <input #boundModalStart class=\"form-control flatpickrStart\" id=\"start-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"end-date\" class=\"form-control-label\">End Date:</label>\n                        <input #boundModalEnd class=\"form-control flatpickrEnd\" id=\"end-date\" placeholder=\"Choose Date...\" type=\"datetime-local\" step=\"any\"/>\n                    </div>\n                </form>\n            </div>\n            <div #boundHiddenId class=\"hidden-id\" style=\"display:none;\"></div>\n            <div class=\"modal-footer\">\n                <button type=\"button\" class=\"btn btn-elegant\" data-dismiss=\"modal\" (click)=\"removeModalValues(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Close</button>\n                <button type=\"button\" class=\"btn btn-primary\" (click)=\"updateTask(boundModalTitle, boundModalStart, boundModalEnd, boundHiddenId);\">Save</button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<app-calendar></app-calendar>"
 
 /***/ },
 
@@ -124,30 +124,13 @@ module.exports = __webpack_require__(605);
 /***/ function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return Config; });
-var Config = (function () {
-    function Config() {
-    }
-    Config.baseUrl = "https://calm-inlet-47809.herokuapp.com";
-    Config.authOKey = "9AX3hBcDf8Hh3tobK2G6t3CYj7T8p7pZ";
-    Config.authOUser = "bhan.auth0.com";
-    return Config;
-}());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app-config.js.map
-
-/***/ },
-
-/***/ 307:
-/***/ function(module, exports, __webpack_require__) {
-
-"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt__ = __webpack_require__(471);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_angular2_jwt__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_user_service_user_service__ = __webpack_require__(470);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(223);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__shared_routes__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_router__ = __webpack_require__(304);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AuthService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -223,6 +206,23 @@ var AuthService = (function () {
 
 /***/ },
 
+/***/ 223:
+/***/ function(module, exports, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return Config; });
+var Config = (function () {
+    function Config() {
+    }
+    Config.baseUrl = "https://calm-inlet-47809.herokuapp.com";
+    Config.authOKey = "9AX3hBcDf8Hh3tobK2G6t3CYj7T8p7pZ";
+    Config.authOUser = "bhan.auth0.com";
+    return Config;
+}());
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app-config.js.map
+
+/***/ },
+
 /***/ 308:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -267,11 +267,25 @@ var GraphComponent = (function () {
     }
     GraphComponent.prototype.ngOnInit = function () {
         var that = this;
-        var myChart = echarts.init(document.getElementById('graph'));
-        this.initChart(myChart);
-        window.addEventListener('resize', myChart.resize, false);
+        this.lineChart = echarts.init(document.getElementById('graph'));
+        this.pieChart = echarts.init(document.getElementById('pie'));
+        this.initLoadingModal();
+        this.initCharts();
+        window.addEventListener('resize', this.lineChart.resize, false);
+        window.addEventListener('resize', this.pieChart.resize, false);
     };
-    GraphComponent.prototype.initChart = function (myChart) {
+    GraphComponent.prototype.initLoadingModal = function () {
+        $('.boop').loadingModal({
+            position: 'fixed',
+            text: '',
+            color: '#fff',
+            opacity: '0.7',
+            backgroundColor: 'rgb(0,0,0)',
+            animation: 'cubeGrid'
+        });
+    };
+    GraphComponent.prototype.initCharts = function () {
+        $('.boop').show();
         var that = this;
         this.taskService.getTasksForUser(localStorage.getItem("user_id")).subscribe(function (tasks) {
             for (var i = 0, len = tasks.length; i < len; i++) {
@@ -280,10 +294,101 @@ var GraphComponent = (function () {
                 that.addDatesToDateArray(startDate, endDate);
             }
             that.constructDatesAndValues();
-            that.constructChartOptions(myChart, that.dateArray, that.valueArray);
+            that.constructChartOptions(that.dateArray, that.valueArray);
+            var pieChartData = that.constructPieObject(tasks);
+            that.constructPieChartOptions(pieChartData);
+            $('.boop').hide();
+        }, function (err) {
+            bootbox.alert("Server error, you may be disconnected from the internet");
         });
     };
-    GraphComponent.prototype.constructChartOptions = function (myChart, date, data) {
+    GraphComponent.prototype.constructPieObject = function (tasks) {
+        var hashMap = {};
+        for (var i = 0, len = tasks.length; i < len; i++) {
+            if (hashMap[tasks[i].category.name] === undefined) {
+                hashMap[tasks[i].category.name] = 0;
+            }
+            else {
+                hashMap[tasks[i].category.name] = hashMap[tasks[i].category.name] + 1;
+            }
+        }
+        return hashMap;
+    };
+    GraphComponent.prototype.constructPieChartOptions = function (data) {
+        var legendData = [];
+        var seriesData = [];
+        for (var key in data) {
+            legendData.push(key);
+            seriesData.push({ 'value': data[key], 'name': key });
+        }
+        var option = {
+            title: {
+                text: 'Distribution',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                top: '20%',
+                left: '65%',
+                orient: 'vertical',
+                data: legendData
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    // dataView : {
+                    //     show: false,
+                    //     readOnly: true,
+                    //     title: 'Data'
+                    // },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel'],
+                        title: 'Switch Types'
+                    },
+                    restore: {
+                        show: true,
+                        title: 'reset'
+                    },
+                    saveAsImage: {
+                        show: true,
+                        title: 'download'
+                    }
+                },
+                right: '10%',
+                top: '20px'
+            },
+            calculable: true,
+            series: [
+                {
+                    name: 'Distribution',
+                    type: 'pie',
+                    radius: ['5%', '70%'],
+                    center: ['35%', '50%'],
+                    roseType: 'radius',
+                    width: '50%',
+                    max: 40,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        }
+                    },
+                    data: seriesData
+                }
+            ]
+        };
+        this.pieChart.setOption(option);
+    };
+    GraphComponent.prototype.constructChartOptions = function (date, data) {
         var option = {
             tooltip: {
                 trigger: 'axis',
@@ -293,7 +398,7 @@ var GraphComponent = (function () {
             },
             title: {
                 left: 'center',
-                text: 'PowerList Work Balancer',
+                text: 'Timeline',
             },
             toolbox: {
                 feature: {
@@ -305,7 +410,7 @@ var GraphComponent = (function () {
                         yAxisIndex: 'none'
                     },
                     restore: {
-                        title: 'refresh'
+                        title: 'reset'
                     },
                     saveAsImage: {
                         title: 'download'
@@ -318,7 +423,12 @@ var GraphComponent = (function () {
             xAxis: {
                 type: 'category',
                 boundaryGap: false,
-                data: date
+                data: date,
+                axisLabel: {
+                    formatter: function (value, index) {
+                        return value.toString().split(' ').splice(1, 3).join(' ');
+                    }
+                }
             },
             yAxis: {
                 type: 'value',
@@ -372,7 +482,7 @@ var GraphComponent = (function () {
                 }
             ]
         };
-        myChart.setOption(option);
+        this.lineChart.setOption(option);
     };
     GraphComponent.prototype.addDatesToDateArray = function (startDate, stopDate) {
         var currentDate = startDate;
@@ -459,6 +569,7 @@ var GraphComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__ = __webpack_require__(469);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__ = __webpack_require__(750);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__shared_app_colors__ = __webpack_require__(751);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__services_auth_service_auth_service__ = __webpack_require__(222);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return ListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -476,21 +587,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ListComponent = (function () {
-    function ListComponent(calendarService, taskService, categoryService) {
+    function ListComponent(calendarService, taskService, categoryService, authService) {
         this.calendarService = calendarService;
         this.taskService = taskService;
         this.categoryService = categoryService;
+        this.authService = authService;
         this.tasks = [];
         this.categories = [];
         this.selectedCategoryId = null;
         this.colors = [__WEBPACK_IMPORTED_MODULE_6__shared_app_colors__["a" /* Colors */].lightPink, __WEBPACK_IMPORTED_MODULE_6__shared_app_colors__["a" /* Colors */].lightBlue, __WEBPACK_IMPORTED_MODULE_6__shared_app_colors__["a" /* Colors */].lightGreen, __WEBPACK_IMPORTED_MODULE_6__shared_app_colors__["a" /* Colors */].lightYellow];
     }
     ListComponent.prototype.ngOnInit = function () {
-        this.initLoadingModal();
-        this.initializeUI();
-        this.initializeCategories();
-        this.fetchTasks(true, null, null);
+        if (this.authService.isAuthenticated()) {
+            this.initLoadingModal();
+            this.initializeUI();
+            this.initializeCategories();
+            this.fetchTasks(true, null, null);
+        }
     };
     ListComponent.prototype.initializeUI = function () {
         flatpickr('.flatpickrStart', { utc: true, enableTime: true });
@@ -784,14 +899,14 @@ var ListComponent = (function () {
     ListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-list',
-            providers: [__WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */], __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */], __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */], __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */], __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */], __WEBPACK_IMPORTED_MODULE_7__services_auth_service_auth_service__["a" /* AuthService */]],
             template: __webpack_require__(1036),
             styles: [__webpack_require__(1024)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */]) === 'function' && _c) || Object])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_3__services_calendar_service_calendar_service__["a" /* CalendarService */]) === 'function' && _a) || Object, (typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_4__services_task_service_task_service__["a" /* TaskService */]) === 'function' && _b) || Object, (typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5__services_category_service_category_service__["a" /* CategoryService */]) === 'function' && _c) || Object, (typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__services_auth_service_auth_service__["a" /* AuthService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_7__services_auth_service_auth_service__["a" /* AuthService */]) === 'function' && _d) || Object])
     ], ListComponent);
     return ListComponent;
-    var _a, _b, _c;
+    var _a, _b, _c, _d;
 }());
 //# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/list.component.js.map
 
@@ -802,7 +917,7 @@ var ListComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__ = __webpack_require__(222);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return LoginComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -848,8 +963,8 @@ var LoginComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__ = __webpack_require__(307);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_routes__ = __webpack_require__(308);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return PrivateComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -899,9 +1014,9 @@ var PrivateComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(243);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(223);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return TaskService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -968,9 +1083,9 @@ var TaskService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(243);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(223);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return UserService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1052,7 +1167,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dyna
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__(304);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_list_list_component__ = __webpack_require__(466);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_graph_graph_component__ = __webpack_require__(465);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_login_login_component__ = __webpack_require__(467);
@@ -1130,7 +1245,7 @@ var AllergyClientRoutingModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_login_login_component__ = __webpack_require__(467);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_private_private_component__ = __webpack_require__(468);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_graph_graph_component__ = __webpack_require__(465);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_Rx__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_Rx__ = __webpack_require__(243);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14_rxjs_Rx__);
 /* unused harmony export authHttpServiceFactory */
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return AppModule; });
@@ -1331,7 +1446,7 @@ var AppComponent = (function () {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__ = __webpack_require__(307);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service_auth_service__ = __webpack_require__(222);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return NavbarComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1447,9 +1562,9 @@ var CalendarService = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(242);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__ = __webpack_require__(243);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shared_app_config__ = __webpack_require__(223);
 /* harmony export (binding) */ __webpack_require__.d(exports, "a", function() { return CategoryService; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
