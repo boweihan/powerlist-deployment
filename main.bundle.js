@@ -31,7 +31,7 @@ module.exports = "/* ********************** LIST CODE ********************** */\
 /***/ 1025:
 /***/ function(module, exports) {
 
-module.exports = "canvas {\n    position: absolute;\n}\n.vs-title-block {\n    color: white;\n    margin: auto;\n    margin-top: 20vh;\n    text-align: center;\n}\n.vs-login {\n    position: fixed;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    overflow: scroll;\n}\n\n.vs-login-button {\n    display: block;\n    text-align: center;\n    margin: auto;\n    margin-top: 8vh;\n    font-weight: 300;\n    border: none;\n    border-radius: 0px;\n    background-color: white !important;\n    color: black !important;\n}\n    .vs-login-button:hover {\n        background-color: #A1FFFF !important;\n        font-weight: 700;\n    }\n\n.vs-site-description {\n    font-size: 3vh;\n    margin-top: 30px;\n    display: block;\n}"
+module.exports = "canvas {\n    position: absolute;\n}\n.vs-title-block {\n    color: white;\n    margin: auto;\n    margin-top: 20vh;\n    text-align: center;\n}\n.vs-login {\n    position: fixed;\n    background-color: black;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    right: 0;\n    overflow: scroll;\n}\n\n.vs-login-button {\n    display: block;\n    text-align: center;\n    margin: auto;\n    margin-top: 8vh;\n    font-weight: 700;\n    border: none;\n    box-shadow: none;\n    background: none !important;\n    color: white !important;\n}\n    .vs-login-button:hover {\n        background: none !important;\n        color: yellow !important;\n        -webkit-transform: scale(1.1);\n                transform: scale(1.1);\n        cursor: pointer;\n    }\n\n.vs-site-description {\n    font-size: 3vh;\n    margin-top: 30px;\n    display: block;\n}"
 
 /***/ },
 
@@ -87,7 +87,7 @@ module.exports = "<!-- sidebar -->\n<div class=\"boop\" style='top: 0; bottom: 0
 /***/ 1037:
 /***/ function(module, exports) {
 
-module.exports = "<canvas id='c'></canvas>\n<div class=\"vs-login\">\n  <div class=\"vs-title-block\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A lightweight, electrifying task scheduler</span></div>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.isAuthenticated()\">Log In or Sign Up</button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.isAuthenticated()\"><a style=\"text-decoration: none\" href=\"../private/(aux:list)\">Continue to PowerList</a></button>\n</div>"
+module.exports = "<canvas id='c'></canvas>\n<div class=\"vs-login\">\n  <div class=\"vs-title-block\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A lightweight, <span style=\"color: yellow\">electrifying</span> task scheduler</span></div>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.isAuthenticated()\"><i style=\"font-size: 10em\" class=\"fa fa-forward\" aria-hidden=\"true\"></i></button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.isAuthenticated()\"><i style=\"font-size: 10em; color: #D84D20;\" class=\"fa fa-forward\" aria-hidden=\"true\"></i></button>\n</div>"
 
 /***/ },
 
@@ -933,11 +933,11 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.ngOnChanges = function () { };
     LoginComponent.prototype.ngOnInit = function () {
-        this.initElectricity();
+        // this.initElectricity();
     };
     LoginComponent.prototype.initElectricity = function () {
-        var electricity = new Electricity();
-        electricity.init();
+        // let electricity = new Electricity();
+        // electricity.init();
     };
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
