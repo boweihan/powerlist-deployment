@@ -625,6 +625,7 @@ var ListComponent = (function () {
         }
         else {
             var that_1 = this;
+            this.showLoadingModalAfterTimeout();
             this.taskService.getCategoryTasks(this.selectedCategoryId).subscribe(function (tasks) {
                 that_1.tasks = []; // javascript garbage collects
                 for (var i = 0; i < tasks.length; i++) {
@@ -637,11 +638,11 @@ var ListComponent = (function () {
             }, function (err) {
                 bootbox.alert("Server error, you may be disconnected from the internet");
             });
-            this.showLoadingModalAfterTimeout();
         }
     };
     ListComponent.prototype.fetchHomeTasks = function (firstLoad, boundCategoryTitle) {
         var that = this;
+        this.showLoadingModalAfterTimeout();
         this.taskService.getTasksForUser(localStorage.getItem("user_id")).subscribe(function (tasks) {
             that.tasks = [];
             for (var i = 0; i < tasks.length; i++) {
@@ -657,7 +658,6 @@ var ListComponent = (function () {
         }, function (err) {
             bootbox.alert("Server error, you may be disconnected from the internet");
         });
-        this.showLoadingModalAfterTimeout();
     };
     ListComponent.prototype.addTask = function (taskInput, startDateInput, endDateInput, event) {
         var that = this;
@@ -888,12 +888,10 @@ var ListComponent = (function () {
         });
     };
     ListComponent.prototype.showLoadingModal = function () {
-        if (this.tasks.length === 0) {
-            $('.boop').show();
-        }
+        $('.boop').show();
     };
     ListComponent.prototype.showLoadingModalAfterTimeout = function () {
-        setTimeout(this.showLoadingModal(), 500);
+        setTimeout(this.showLoadingModal(), 1000);
     };
     ListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
