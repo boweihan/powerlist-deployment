@@ -87,7 +87,7 @@ module.exports = "<!-- sidebar -->\n<div class=\"boop\" style='top: 0; bottom: 0
 /***/ 1037:
 /***/ function(module, exports) {
 
-module.exports = "<canvas id='c'></canvas>\n<div class=\"vs-login\">\n  <div class=\"vs-title-block\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A lightweight, <span style=\"color: yellow\">electrifying</span> task scheduler</span></div>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.isAuthenticated()\"><i style=\"font-size: 10em\" class=\"fa fa-forward\" aria-hidden=\"true\"></i></button>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" *ngIf=\"authService.isAuthenticated()\"><i style=\"font-size: 10em; color: #D84D20;\" class=\"fa fa-forward\" aria-hidden=\"true\"></i></button>\n</div>"
+module.exports = "<canvas id='c'></canvas>\n<div class=\"vs-login\">\n  <div class=\"vs-title-block\"><span style='font-size: 10vw;'>PowerList</span><span class='vs-site-description'>A lightweight, <span style=\"color: yellow\">electrifying</span> task scheduler</span></div>\n  <button class=\"btn btn-primary btn-lg vs-login-button\" (click)=\"authService.login()\" *ngIf=\"!authService.isAuthenticated()\"><i style=\"font-size: 10em\" class=\"fa fa-forward\" aria-hidden=\"true\"></i></button>\n  <button class=\"btn btn-primary btn-lg vs-login-button js-animate-auth\" *ngIf=\"authService.isAuthenticated()\">Waiting for authorization</button>\n</div>"
 
 /***/ },
 
@@ -933,11 +933,16 @@ var LoginComponent = (function () {
     }
     LoginComponent.prototype.ngOnChanges = function () { };
     LoginComponent.prototype.ngOnInit = function () {
-        // this.initElectricity();
+        this._initAuthAnimation();
     };
-    LoginComponent.prototype.initElectricity = function () {
-        // let electricity = new Electricity();
-        // electricity.init();
+    LoginComponent.prototype._initAuthAnimation = function () {
+        setInterval(function () {
+            var elem = $('.js-animate-auth');
+            if (elem.text().indexOf("....") !== -1) {
+                elem.text(elem.text().substring(0, elem.text().length - 4));
+            }
+            elem.text(elem.text() + ".");
+        }, 500);
     };
     LoginComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
