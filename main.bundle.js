@@ -653,8 +653,8 @@ var ListComponent = (function () {
                 if (boundCategoryTitle) {
                     boundCategoryTitle.textContent = "Home";
                 }
-                $('.boop').hide();
             }
+            $('.boop').hide();
         }, function (err) {
             bootbox.alert("Server error, you may be disconnected from the internet");
         });
