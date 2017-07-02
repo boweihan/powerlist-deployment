@@ -202,7 +202,7 @@ var AuthService = (function () {
     return AuthService;
     var _a, _b;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/auth.service.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/auth.service.js.map
 
 /***/ },
 
@@ -219,7 +219,7 @@ var Config = (function () {
     Config.authOUser = "bhan.auth0.com";
     return Config;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app-config.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/app-config.js.map
 
 /***/ },
 
@@ -237,7 +237,7 @@ var AppRoutes = (function () {
     AppRoutes.graph = "graph";
     return AppRoutes;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/routes.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/routes.js.map
 
 /***/ },
 
@@ -305,11 +305,16 @@ var GraphComponent = (function () {
     GraphComponent.prototype.constructPieObject = function (tasks) {
         var hashMap = {};
         for (var i = 0, len = tasks.length; i < len; i++) {
-            if (hashMap[tasks[i].category.name] === undefined) {
-                hashMap[tasks[i].category.name] = 1;
+            if (!tasks[i].category) {
+                hashMap["Uncategorized"] = hashMap["Uncategorized"] ? hashMap["Uncategorized"] + 1 : 1;
             }
             else {
-                hashMap[tasks[i].category.name] = hashMap[tasks[i].category.name] + 1;
+                if (hashMap[tasks[i].category.name] === undefined) {
+                    hashMap[tasks[i].category.name] = 1;
+                }
+                else {
+                    hashMap[tasks[i].category.name] = hashMap[tasks[i].category.name] + 1;
+                }
             }
         }
         return hashMap;
@@ -553,7 +558,7 @@ var GraphComponent = (function () {
     return GraphComponent;
     var _a;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/graph.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/graph.component.js.map
 
 /***/ },
 
@@ -905,7 +910,7 @@ var ListComponent = (function () {
     return ListComponent;
     var _a, _b, _c, _d;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/list.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/list.component.js.map
 
 /***/ },
 
@@ -956,7 +961,7 @@ var LoginComponent = (function () {
     return LoginComponent;
     var _a;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/login.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/login.component.js.map
 
 /***/ },
 
@@ -1006,7 +1011,7 @@ var PrivateComponent = (function () {
     return PrivateComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/private.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/private.component.js.map
 
 /***/ },
 
@@ -1075,7 +1080,7 @@ var TaskService = (function () {
     return TaskService;
     var _a;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/task.service.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/task.service.js.map
 
 /***/ },
 
@@ -1123,7 +1128,7 @@ var UserService = (function () {
     return UserService;
     var _a;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/user.service.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/user.service.js.map
 
 /***/ },
 
@@ -1160,7 +1165,7 @@ if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["enableProdMode"])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_4__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/main.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/main.js.map
 
 /***/ },
 
@@ -1224,7 +1229,7 @@ var AllergyClientRoutingModule = (function () {
     ], AllergyClientRoutingModule);
     return AllergyClientRoutingModule;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app-routing.module.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/app-routing.module.js.map
 
 /***/ },
 
@@ -1315,7 +1320,7 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app.module.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/app.module.js.map
 
 /***/ },
 
@@ -1367,7 +1372,7 @@ var CalendarComponent = (function () {
     ], CalendarComponent);
     return CalendarComponent;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/calendar.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/calendar.component.js.map
 
 /***/ },
 
@@ -1401,7 +1406,7 @@ var FooterComponent = (function () {
     ], FooterComponent);
     return FooterComponent;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/footer.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/footer.component.js.map
 
 /***/ },
 
@@ -1439,7 +1444,7 @@ var AppComponent = (function () {
     ], AppComponent);
     return AppComponent;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/app.component.js.map
 
 /***/ },
 
@@ -1478,7 +1483,7 @@ var NavbarComponent = (function () {
     return NavbarComponent;
     var _a;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/navbar.component.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/navbar.component.js.map
 
 /***/ },
 
@@ -1495,7 +1500,7 @@ var Category = (function () {
     }
     return Category;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/category.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/category.js.map
 
 /***/ },
 
@@ -1519,7 +1524,7 @@ var Task = (function () {
     }
     return Task;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/task.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/task.js.map
 
 /***/ },
 
@@ -1554,7 +1559,7 @@ var CalendarService = (function () {
     ], CalendarService);
     return CalendarService;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/calendar.service.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/calendar.service.js.map
 
 /***/ },
 
@@ -1623,7 +1628,7 @@ var CategoryService = (function () {
     return CategoryService;
     var _a;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/category.service.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/category.service.js.map
 
 /***/ },
 
@@ -1641,7 +1646,7 @@ var Colors = (function () {
     Colors.lightYellow = "#ffffb3";
     return Colors;
 }());
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/app-colors.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/app-colors.js.map
 
 /***/ },
 
@@ -1657,7 +1662,7 @@ var Colors = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/environment.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/environment.js.map
 
 /***/ },
 
@@ -1713,7 +1718,7 @@ var environment = {
 
 
 
-//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/powerlist/src/polyfills.js.map
+//# sourceMappingURL=/Users/bowei/Documents/Development/Projects/JavaScript/powerlist/src/polyfills.js.map
 
 /***/ }
 
